@@ -11,12 +11,35 @@
   <meta name="author" content="">
   <meta name="keywords" content="косене двор, почистване, извозване, транспорт, Павликени, Велико Търново, рязане дървета, самосвал, бус">
   <meta name="description" content="Бързи и надеждни услуги за двор, почистване и транспорт в гр. Павликени и Великотърновска област. Косене, почистване, извозване, транспорт с бус и самосвал.">
-  <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
-  <link rel="stylesheet" type="text/css" href="css/vendor.css">
+  <script src="https://cdn.tailwindcss.com"></script>
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css" />
-  <link rel="stylesheet" type="text/css" href="style.css">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600;1,700&family=Source+Sans+3:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            'accent': '#14ADEF',
+            'primary': '#EE8E1E',
+            'dark': '#666A6C',
+            'light-black': '#343536',
+            'black': '#2C2E2F',
+            'light-blue': '#5BC4F1',
+          },
+          fontFamily: {
+            'heading': ['Source Sans 3', 'sans-serif'],
+            'body': ['Lora', 'serif'],
+          },
+        }
+      }
+    }
+  </script>
+  <style>
+    html { scroll-behavior: smooth; }
+    body { font-family: 'Lora', serif; }
+    h1, h2, h3, h4, h5, h6 { font-family: 'Source Sans 3', sans-serif; text-transform: uppercase; }
+  </style>
 </head>
 
 <body>
@@ -110,73 +133,70 @@
     </symbol>
   </svg>
 
-  <header id="header">
-    <nav class="header-top bg-gray pt-2 pb-2">
-      <div class="container">
-        <div class="d-flex flex-wrap justify-content-between align-items-center">
-          <ul class="info d-flex flex-wrap list-unstyled m-0">
-            <li class="location text-capitalize d-flex align-items-center me-4">
-              <svg class="accent-color me-1" width="18" height="18">
+  <header id="header" class="sticky top-0 z-50 bg-white shadow-sm">
+    <nav class="bg-gray-100 py-2 border-b border-gray-200">
+      <div class="container mx-auto px-4">
+        <div class="flex flex-wrap justify-between items-center">
+          <ul class="flex flex-wrap gap-4 list-none m-0 p-0">
+            <li class="flex items-center text-sm capitalize">
+              <svg class="text-accent mr-1" width="18" height="18">
                 <use xlink:href="#location"></use>
               </svg>гр. Павликени и Великотърновска област
             </li>
-            <li class="phone text-capitalize d-flex align-items-center me-4">
-              <svg class="accent-color me-1" width="18" height="18">
+            <li class="flex items-center text-sm capitalize">
+              <svg class="text-accent mr-1" width="18" height="18">
                 <use xlink:href="#phone"></use>
               </svg>тел: 0887 079 976
             </li>
-            <li class="time text-capitalize d-flex align-items-center me-4">
-              <svg class="accent-color me-1" width="18" height="18">
+            <li class="flex items-center text-sm capitalize">
+              <svg class="text-accent mr-1" width="18" height="18">
                 <use xlink:href="#clock"></use>
               </svg>Бърза реакция - често още същия ден
             </li>
           </ul>
-          <div class="btn-quote">
-            <a href="#quote" class="btn btn-outline btn-outline-small text-uppercase">Безплатна оферта</a>
+          <div>
+            <a href="#quote" class="px-5 py-1.5 text-xs uppercase border-2 border-dark text-dark hover:bg-dark hover:text-white transition-all duration-300 rounded-full">Безплатна оферта</a>
           </div>
         </div>
       </div>
     </nav>
 
-    <nav id="primary-header" class="navbar navbar-expand-lg py-3">
-      <div class="container">
-        <a class="navbar-brand" href="index.html">
-          <h3 class="mb-0 fw-bold">STEFAN-PAVLIKENI</h3>
-        </a>
-        <button class="navbar-toggler border-0 d-flex d-lg-none order-3 p-2 shadow-none" type="button" data-bs-toggle="offcanvas" data-bs-target="#bdNavbar" aria-controls="bdNavbar" aria-expanded="false">
-          <svg class="navbar-icon" width="60" height="60">
-            <use xlink:href="#navbar-icon"></use>
-          </svg>
-        </button>
-        <div class="header-bottom offcanvas offcanvas-end" id="bdNavbar" aria-labelledby="bdNavbarOffcanvasLabel">
-          <div class="offcanvas-header px-4 pb-0">
-            <button type="button" class="btn-close btn-close-black" data-bs-dismiss="offcanvas" aria-label="Close" data-bs-target="#bdNavbar"></button>
-          </div>
-          <div class="offcanvas-body align-items-center justify-content-end">
-            <ul class="navbar-nav mb-2 mb-lg-0">
-              <li class="nav-item px-3">
-                <a class="nav-link active" aria-current="page" href="index.html">Начало</a>
+    <nav class="py-3 bg-white">
+      <div class="container mx-auto px-4">
+        <div class="flex items-center justify-between">
+          <a class="flex items-center" href="index.html">
+            <h3 class="mb-0 font-bold text-xl bg-gradient-to-r from-primary to-accent bg-clip-text text-transparent">STEFAN-PAVLIKENI</h3>
+          </a>
+          <button class="lg:hidden p-2 border-0" type="button" data-bs-toggle="offcanvas" data-bs-target="#bdNavbar" aria-controls="bdNavbar" aria-expanded="false">
+            <svg class="text-dark" width="30" height="30">
+              <use xlink:href="#navbar-icon"></use>
+            </svg>
+          </button>
+          <div class="hidden lg:flex items-center">
+            <ul class="flex items-center gap-6 list-none m-0 p-0">
+              <li>
+                <a class="uppercase text-dark hover:text-primary transition-colors duration-300 text-sm tracking-wide" aria-current="page" href="index.html">Начало</a>
               </li>
-              <li class="nav-item px-3">
-                <a class="nav-link" href="#about-us">За нас</a>
+              <li>
+                <a class="uppercase text-dark hover:text-primary transition-colors duration-300 text-sm tracking-wide" href="#about-us">За нас</a>
               </li>
-              <li class="nav-item px-3">
-                <a class="nav-link" href="#our-services">Услуги</a>
+              <li>
+                <a class="uppercase text-dark hover:text-primary transition-colors duration-300 text-sm tracking-wide" href="#our-services">Услуги</a>
               </li>
-              <li class="nav-item px-3">
-                <a class="nav-link" href="#quote">Контакт</a>
+              <li>
+                <a class="uppercase text-dark hover:text-primary transition-colors duration-300 text-sm tracking-wide" href="#quote">Контакт</a>
               </li>
-              <li class="nav-item search-dropdown ms-3 ms-lg-5 dropdown">
-                <a class="nav-link p-0 search dropdown-toggle" data-bs-toggle="dropdown" href="#" role="button" aria-expanded="false">
-                  <svg class="search" width="24" height="24">
+              <li class="ml-8 relative">
+                <a class="p-0 search dropdown-toggle cursor-pointer" data-bs-toggle="dropdown" href="#" role="button" aria-expanded="false">
+                  <svg class="text-dark" width="24" height="24">
                     <use xlink:href="#search"></use>
                   </svg>
                 </a>
-                <ul class="dropdown-menu dropdown-menu-end animate slide mt-3 border-0 p-3 shadow">
-                  <li class="position-relative d-flex align-items-center p-0">
-                    <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
-                    <button class="btn btn-primary position-absolute end-0" type="submit">
-                      <svg class="search" width="24" height="24">
+                <ul class="dropdown-menu dropdown-menu-end absolute right-0 mt-3 bg-white border-0 rounded-lg shadow-lg p-3 w-64">
+                  <li class="relative flex items-center p-0">
+                    <input class="w-full px-3 py-2 border border-gray-300 rounded focus:outline-none focus:ring-2 focus:ring-accent pr-10" type="search" placeholder="Search" aria-label="Search">
+                    <button class="absolute right-2 p-1 text-accent hover:text-primary" type="submit">
+                      <svg width="20" height="20">
                         <use xlink:href="#search"></use>
                       </svg>
                     </button>
@@ -188,33 +208,57 @@
         </div>
       </div>
     </nav>
+
+    <!-- Mobile Menu Offcanvas -->
+    <div class="offcanvas offcanvas-end fixed bottom-0 flex flex-col max-w-full bg-white invisible bg-clip-padding shadow-sm outline-none transition duration-300 ease-in-out transform translate-x-full top-0 right-0 border-none w-96" id="bdNavbar" aria-labelledby="bdNavbarOffcanvasLabel">
+      <div class="offcanvas-header px-4 pb-0 flex items-center justify-between p-4 border-b">
+        <h5 class="offcanvas-title font-semibold" id="bdNavbarOffcanvasLabel">Меню</h5>
+        <button type="button" class="btn-close text-reset opacity-50 hover:opacity-100" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+      </div>
+      <div class="offcanvas-body flex-grow p-4 overflow-y-auto">
+        <ul class="flex flex-col gap-4 list-none m-0 p-0">
+          <li>
+            <a class="block uppercase text-dark hover:text-primary transition-colors duration-300 text-base py-2" aria-current="page" href="index.html">Начало</a>
+          </li>
+          <li>
+            <a class="block uppercase text-dark hover:text-primary transition-colors duration-300 text-base py-2" href="#about-us">За нас</a>
+          </li>
+          <li>
+            <a class="block uppercase text-dark hover:text-primary transition-colors duration-300 text-base py-2" href="#our-services">Услуги</a>
+          </li>
+          <li>
+            <a class="block uppercase text-dark hover:text-primary transition-colors duration-300 text-base py-2" href="#quote">Контакт</a>
+          </li>
+        </ul>
+      </div>
+    </div>
   </header>
 
-  <section id="slider">
-    <div class="swiper slider position-relative">
+  <section id="slider" class="relative">
+    <div class="swiper slider relative">
       <div class="swiper-wrapper">
-        <div class="swiper-slide d-flex" style="background-image: url(images/slider-image.jpg); background-size: cover; background-repeat: no-repeat; height: 80vh; background-position: center; height: 80vh;">
-          <div class="banner-content px-5 py-4 text-center m-auto py-5 rounded-4 shadow">
-            <h2 class="mb-0">Бързи и надеждни услуги</h2>
-            <p class="fs-4 text-capitalize">Косене, почистване и транспорт в гр. Павликени и Великотърновска област</p>
-            <a href="#our-services" class="btn btn-primary mt-3">Нашите услуги</a>
+        <div class="swiper-slide flex items-center justify-center bg-cover bg-center bg-no-repeat h-[80vh]" style="background-image: url(images/slider-image.jpg);">
+          <div class="bg-white/95 backdrop-blur-sm px-8 py-6 text-center mx-auto rounded-2xl shadow-2xl max-w-2xl hover:shadow-3xl transition-all duration-300 hover:-translate-y-1">
+            <h2 class="mb-0 text-3xl md:text-4xl font-bold text-black mb-4">Бързи и надеждни услуги</h2>
+            <p class="text-lg md:text-xl capitalize text-dark mb-6">Косене, почистване и транспорт в гр. Павликени и Великотърновска област</p>
+            <a href="#our-services" class="inline-block px-8 py-3.5 bg-gradient-to-r from-primary to-[#FF9F40] text-white uppercase font-semibold rounded-full shadow-lg hover:shadow-xl hover:-translate-y-0.5 transition-all duration-300 hover:from-accent hover:to-[#1BB8F5]">Нашите услуги</a>
           </div>
         </div>
-        <div class="swiper-slide d-flex" style="background-image: url(images/slider-image1.jpg); background-size: cover; background-repeat: no-repeat; height: 80vh; background-position: center; height: 80vh;">
-          <div class="banner-content px-5 py-4 text-center m-auto py-5 rounded-4 shadow">
-            <h2 class="mb-0">Качествено косене и почистване</h2>
-            <p class="fs-4 text-capitalize">Търсите качествено косене, почистване или извозване? Ние сме правилният избор!</p>
-            <a href="#quote" class="btn btn-primary mt-3">Безплатна оферта</a>
+        <div class="swiper-slide flex items-center justify-center bg-cover bg-center bg-no-repeat h-[80vh]" style="background-image: url(images/slider-image1.jpg);">
+          <div class="bg-white/95 backdrop-blur-sm px-8 py-6 text-center mx-auto rounded-2xl shadow-2xl max-w-2xl hover:shadow-3xl transition-all duration-300 hover:-translate-y-1">
+            <h2 class="mb-0 text-3xl md:text-4xl font-bold text-black mb-4">Качествено косене и почистване</h2>
+            <p class="text-lg md:text-xl capitalize text-dark mb-6">Търсите качествено косене, почистване или извозване? Ние сме правилният избор!</p>
+            <a href="#quote" class="inline-block px-8 py-3.5 bg-gradient-to-r from-primary to-[#FF9F40] text-white uppercase font-semibold rounded-full shadow-lg hover:shadow-xl hover:-translate-y-0.5 transition-all duration-300 hover:from-accent hover:to-[#1BB8F5]">Безплатна оферта</a>
           </div>
         </div>
       </div>
-      <div class="position-absolute top-0 bottom-0 end-0 m-auto me-0 me-md-5 main-slider-button-next">
-        <svg class="chevron-forward-circle light-color" width="60" height="60">
+      <div class="absolute top-1/2 -translate-y-1/2 right-0 md:right-5 z-10 cursor-pointer opacity-90 hover:opacity-100 hover:scale-110 transition-all duration-300 main-slider-button-next">
+        <svg class="text-white" width="60" height="60">
           <use xlink:href="#chevron-forward-circle"></use>
         </svg>
       </div>
-      <div class="position-absolute top-0 bottom-0 start-0 m-auto ms-0 ms-md-5 main-slider-button-prev">
-        <svg class="chevron-back-circle light-color" width="60" height="60">
+      <div class="absolute top-1/2 -translate-y-1/2 left-0 md:left-5 z-10 cursor-pointer opacity-90 hover:opacity-100 hover:scale-110 transition-all duration-300 main-slider-button-prev">
+        <svg class="text-white" width="60" height="60">
           <use xlink:href="#chevron-back-circle"></use>
         </svg>
       </div>
@@ -356,187 +400,181 @@
               </div>
             </div>
 
-  <section id="about-us" class="position-relative bg-gray padding-small">
-    <div class="container">
-      <div class="row">
+  <section id="about-us" class="relative bg-gray-100 py-20 md:py-32">
+    <div class="container mx-auto px-4">
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
 
-        <div class="col-md-6">
-          <div class="imageblock me-4">
-            <a type="button" data-bs-toggle="modal" data-src="https://www.youtube.com/embed/W_tIumKa8VY" data-bs-target="#myModal" class="play-btn position-relative">
-              <img class="img-fluid" src="images/about.png" alt="img">
+        <div class="md:pr-4">
+          <div class="rounded-2xl overflow-hidden shadow-xl hover:shadow-2xl transition-all duration-300 hover:-translate-y-1">
+            <a type="button" data-bs-toggle="modal" data-src="https://www.youtube.com/embed/W_tIumKa8VY" data-bs-target="#myModal" class="block relative group">
+              <img class="w-full h-auto transition-transform duration-300 group-hover:scale-105" src="images/about.png" alt="img">
+              <div class="absolute inset-0 bg-accent/10 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
             </a>
           </div>
         </div>
         
-        <div class="col-md-6 mt-5">
-          <div class="section-title mb-4">
-            <p class="mb-2 fs-4 text-capitalize">За нас</p>
-            <h3>Бързи и надеждни услуги</h3>
+        <div class="md:mt-0 mt-8">
+          <div class="mb-6">
+            <p class="mb-2 text-lg text-primary capitalize">За нас</p>
+            <h3 class="text-3xl md:text-4xl font-bold text-black mb-4 relative pb-4 after:content-[''] after:absolute after:bottom-0 after:left-1/2 after:-translate-x-1/2 after:w-16 after:h-1 after:bg-gradient-to-r after:from-primary after:to-accent after:rounded">Бързи и надеждни услуги</h3>
           </div>
-          <p>Търсите качествено косене, почистване или извозване? Ние сме правилният избор, когато имате нужда от бърза реакция, коректно отношение и отличен резултат. Работим с частни лица и фирми в гр. Павликени и цялата Търновска област.
-            <br>
-          <br>
-          Ние вършим тежката работа – вие се радвате на резултата. С професионално оборудване и опит, гарантираме чисто, подредено и без излишни ангажименти.</p>
-          <a class="btn btn-primary mt-4" href="#our-services">Нашите услуги</a>
+          <p class="text-dark leading-relaxed mb-4">Търсите качествено косене, почистване или извозване? Ние сме правилният избор, когато имате нужда от бърза реакция, коректно отношение и отличен резултат. Работим с частни лица и фирми в гр. Павликени и цялата Търновска област.</p>
+          <p class="text-dark leading-relaxed mb-6">Ние вършим тежката работа – вие се радвате на резултата. С професионално оборудване и опит, гарантираме чисто, подредено и без излишни ангажименти.</p>
+          <a class="inline-block px-8 py-3.5 bg-gradient-to-r from-primary to-[#FF9F40] text-white uppercase font-semibold rounded-full shadow-lg hover:shadow-xl hover:-translate-y-0.5 transition-all duration-300 hover:from-accent hover:to-[#1BB8F5] mt-4" href="#our-services">Нашите услуги</a>
         </div>
         
       </div>
     </div>
-    <img class="pb-5 position-absolute d-none d-xxl-block end-0 bottom-0 w-auto" src="images/bg-pattern-img.png" alt="img">
+    <img class="pb-5 absolute hidden 2xl:block right-0 bottom-0 w-auto" src="images/bg-pattern-img.png" alt="img">
   </section>
 
-  <section id="our-services" class="padding-medium" style="background-image: url(images/services-bg.png); background-repeat: no-repeat; background-position: center;">
+  <section id="our-services" class="py-20 md:py-32 bg-cover bg-center bg-no-repeat" style="background-image: url(images/services-bg.png);">
     <div class="swiper services-swiper py-3">
-      <div class="swiper-wrapper ms-0 ps-0 ms-sm-5 ps-sm-5">
-        <div class="swiper-slide mt-5 service text-center">
-          <img class="rounded-circle mb-4 img-fluid" src="images/service1.jpg" alt="Косене и поддръжка на тревни площи">
-          <h6 class="mb-0">🌿 Косене и поддръжка</h6>
-          <p>Професионално косене на дворове, парцели и зелени площи. Еднократно или абонаментно.</p>
-        </div>
-        <div class="swiper-slide service text-center">
-          <img class="rounded-circle mb-4 img-fluid" src="images/service2.jpg" alt="Почистване на дворове, къщи и апартаменти">
-          <h6 class="mb-0">🧹 Почистване</h6>
-          <p>Пълно почистване след ремонт, разчистване на запустели имоти и изнасяне на отпадъци.</p>
-        </div>
-        <div class="swiper-slide mt-5 pt-5 service text-center">
-          <img class="rounded-circle mb-4 img-fluid" src="images/service3.jpg" alt="Рязане и събаряне на дървета">
-          <h6 class="mb-0">🌳 Рязане на дървета</h6>
-          <p>Безопасно рязане и събаряне на опасни или ненужни дървета, включително в труднодостъпни места.</p>
-        </div>
-        <div class="swiper-slide mt-5 pt-1 service text-center">
-          <img class="rounded-circle mb-4 img-fluid" src="images/service4.jpg" alt="Услуги с бус">
-          <h6 class="mb-0">🚐 Услуги с бус</h6>
-          <p>Превоз на мебели, техника, строителни материали и други товари. Подходящо за преместване.</p>
-        </div>
-        <div class="swiper-slide mt-3 service text-center">
-          <img class="rounded-circle mb-4 img-fluid" src="images/service5.jpg" alt="Услуги със самосвал">
-          <h6 class="mb-0">🚚 Услуги със самосвал</h6>
-          <p>Извозване на строителни отпадъци, земна маса, клони и насипни материали – бързо и отговорно.</p>
-        </div>
-        <div class="swiper-slide mt-3 service text-center">
-          <img class="rounded-circle mb-4 img-fluid" src="images/service1.jpg" alt="Извозване на отпадъци">
-          <h6 class="mb-0">♻️ Извозване на отпадъци</h6>
-          <p>Извозване на строителни и битови отпадъци само до регламентирани депа.</p>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <section id="features">
-    <div class="container">
-      <div class="section-title mb-5 text-center">
-        <p class="mb-2 fs-4 text-capitalize">Защо да изберете нас?</p>
-        <h3>Нашите предимства</h3>
-      </div>
-      <div class="row">
-        <div class="col-md-4">
-          <div class="feature mb-4 text-center px-3 py-4 border rounded-3">
-            <svg class="accent-color my-3" width="32" height="32">
-              <use xlink:href="#clock"></use>
-            </svg>
-            <h6 class="mb-0">Бърза реакция</h6>
-            <p>Често още същия ден. Вие се обаждате – ние се грижим за всичко.</p>
+      <div class="swiper-wrapper">
+        <div class="swiper-slide mt-5">
+          <div class="text-center p-5 rounded-2xl transition-all duration-300 hover:-translate-y-2 hover:bg-white/80 hover:shadow-xl">
+            <img class="rounded-full mb-4 w-full max-w-[200px] mx-auto shadow-[0_0_0_8px_#E3F2F9] hover:shadow-[0_0_0_14px_#E3F2F9,0_4px_12px_rgba(0,0,0,0.1)] transition-all duration-300 hover:scale-105" src="images/service1.jpg" alt="Косене и поддръжка на тревни площи">
+            <h6 class="mb-2 text-lg font-semibold text-black hover:text-primary transition-colors duration-300">🌿 Косене и поддръжка</h6>
+            <p class="text-dark">Професионално косене на дворове, парцели и зелени площи. Еднократно или абонаментно.</p>
           </div>
         </div>
-        <div class="col-md-4">
-          <div class="feature mb-4 text-center px-3 py-4 border rounded-3">
-            <svg class="accent-color my-3" width="32" height="32">
-              <use xlink:href="#cup-first-outline"></use>
-            </svg>
-            <h6 class="mb-0">Коректни цени</h6>
-            <p>Без скрити такси. Прозрачно ценообразуване за всички услуги.</p>
+        <div class="swiper-slide">
+          <div class="text-center p-5 rounded-2xl transition-all duration-300 hover:-translate-y-2 hover:bg-white/80 hover:shadow-xl">
+            <img class="rounded-full mb-4 w-full max-w-[200px] mx-auto shadow-[0_0_0_8px_#E3F2F9] hover:shadow-[0_0_0_14px_#E3F2F9,0_4px_12px_rgba(0,0,0,0.1)] transition-all duration-300 hover:scale-105" src="images/service2.jpg" alt="Почистване на дворове, къщи и апартаменти">
+            <h6 class="mb-2 text-lg font-semibold text-black hover:text-primary transition-colors duration-300">🧹 Почистване</h6>
+            <p class="text-dark">Пълно почистване след ремонт, разчистване на запустели имоти и изнасяне на отпадъци.</p>
           </div>
         </div>
-        <div class="col-md-4">
-          <div class="feature mb-4 text-center px-3 py-4 border rounded-3">
-            <svg class="accent-color my-3" width="32" height="32">
-              <use xlink:href="#battery-charge-outline"></use>
-            </svg>
-            <h6 class="mb-0">Опит и професионално оборудване</h6>
-            <p>Работим с модерна техника и дългогодишен опит в сектора.</p>
+        <div class="swiper-slide mt-5 pt-5">
+          <div class="text-center p-5 rounded-2xl transition-all duration-300 hover:-translate-y-2 hover:bg-white/80 hover:shadow-xl">
+            <img class="rounded-full mb-4 w-full max-w-[200px] mx-auto shadow-[0_0_0_8px_#E3F2F9] hover:shadow-[0_0_0_14px_#E3F2F9,0_4px_12px_rgba(0,0,0,0.1)] transition-all duration-300 hover:scale-105" src="images/service3.jpg" alt="Рязане и събаряне на дървета">
+            <h6 class="mb-2 text-lg font-semibold text-black hover:text-primary transition-colors duration-300">🌳 Рязане на дървета</h6>
+            <p class="text-dark">Безопасно рязане и събаряне на опасни или ненужни дървета, включително в труднодостъпни места.</p>
           </div>
         </div>
-      </div>
-      <div class="row">
-        <div class="col-md-4">
-          <div class="feature mb-4 text-center px-3 py-4 border rounded-3">
-            <svg class="accent-color my-3" width="32" height="32">
-              <use xlink:href="#smart-vacuum-cleaner-outline"></use>
-            </svg>
-            <h6 class="mb-0">Чисто и подредено</h6>
-            <p>Гарантираме отличен резултат без излишни ангажименти.</p>
+        <div class="swiper-slide mt-5 pt-1">
+          <div class="text-center p-5 rounded-2xl transition-all duration-300 hover:-translate-y-2 hover:bg-white/80 hover:shadow-xl">
+            <img class="rounded-full mb-4 w-full max-w-[200px] mx-auto shadow-[0_0_0_8px_#E3F2F9] hover:shadow-[0_0_0_14px_#E3F2F9,0_4px_12px_rgba(0,0,0,0.1)] transition-all duration-300 hover:scale-105" src="images/service4.jpg" alt="Услуги с бус">
+            <h6 class="mb-2 text-lg font-semibold text-black hover:text-primary transition-colors duration-300">🚐 Услуги с бус</h6>
+            <p class="text-dark">Превоз на мебели, техника, строителни материали и други товари. Подходящо за преместване.</p>
           </div>
         </div>
-        <div class="col-md-4">
-          <div class="feature mb-4 text-center px-3 py-4 border rounded-3">
-            <svg class="accent-color my-3" width="32" height="32">
-              <use xlink:href="#call-chat-rounded-outline"></use>
-            </svg>
-            <h6 class="mb-0">Коректно отношение</h6>
-            <p>Професионален подход към всеки клиент и проект.</p>
+        <div class="swiper-slide mt-3">
+          <div class="text-center p-5 rounded-2xl transition-all duration-300 hover:-translate-y-2 hover:bg-white/80 hover:shadow-xl">
+            <img class="rounded-full mb-4 w-full max-w-[200px] mx-auto shadow-[0_0_0_8px_#E3F2F9] hover:shadow-[0_0_0_14px_#E3F2F9,0_4px_12px_rgba(0,0,0,0.1)] transition-all duration-300 hover:scale-105" src="images/service5.jpg" alt="Услуги със самосвал">
+            <h6 class="mb-2 text-lg font-semibold text-black hover:text-primary transition-colors duration-300">🚚 Услуги със самосвал</h6>
+            <p class="text-dark">Извозване на строителни отпадъци, земна маса, клони и насипни материали – бързо и отговорно.</p>
           </div>
         </div>
-        <div class="col-md-4">
-          <div class="feature mb-4 text-center px-3 py-4 border rounded-3">
-            <svg class="accent-color my-3" width="32" height="32">
-              <use xlink:href="#location"></use>
-            </svg>
-            <h6 class="mb-0">Локално обслужване</h6>
-            <p>Работим в гр. Павликени и цялата Великотърновска област.</p>
+        <div class="swiper-slide mt-3">
+          <div class="text-center p-5 rounded-2xl transition-all duration-300 hover:-translate-y-2 hover:bg-white/80 hover:shadow-xl">
+            <img class="rounded-full mb-4 w-full max-w-[200px] mx-auto shadow-[0_0_0_8px_#E3F2F9] hover:shadow-[0_0_0_14px_#E3F2F9,0_4px_12px_rgba(0,0,0,0.1)] transition-all duration-300 hover:scale-105" src="images/service1.jpg" alt="Извозване на отпадъци">
+            <h6 class="mb-2 text-lg font-semibold text-black hover:text-primary transition-colors duration-300">♻️ Извозване на отпадъци</h6>
+            <p class="text-dark">Извозване на строителни и битови отпадъци само до регламентирани депа.</p>
           </div>
         </div>
       </div>
     </div>
   </section>
 
-  <section id="call" class="margin-medium">
-    <div class="container">
-      <div class="position-relative rounded-4 overflow-hidden bg-accent-gradient">
-        <div class="row">
-          <div class="col-md-4">
-          </div>
-          <div class="col-md-8">
-            <div class="call py-5 px-2">
-              <h2 class="text-light">Обадете се сега: 0887 079 976</h2>
-              <p class="fs-4 text-capitalize text-light">Безплатна оферта за всички услуги. Бърза реакция и коректно отношение.</p>
-            </div>
-          </div>
+  <section id="features" class="py-20 md:py-32">
+    <div class="container mx-auto px-4">
+      <div class="mb-12 text-center">
+        <p class="mb-2 text-lg text-primary capitalize">Защо да изберете нас?</p>
+        <h3 class="text-3xl md:text-4xl font-bold text-black relative inline-block pb-4 after:content-[''] after:absolute after:bottom-0 after:left-1/2 after:-translate-x-1/2 after:w-16 after:h-1 after:bg-gradient-to-r after:from-primary after:to-accent after:rounded">Нашите предимства</h3>
+      </div>
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+        <div class="bg-white text-center px-4 py-6 border border-gray-200 rounded-xl transition-all duration-300 hover:-translate-y-1.5 hover:shadow-xl hover:border-accent">
+          <svg class="text-accent my-3 mx-auto transition-transform duration-300 hover:scale-110" width="32" height="32">
+            <use xlink:href="#clock"></use>
+          </svg>
+          <h6 class="mb-2 text-lg font-semibold text-black">Бърза реакция</h6>
+          <p class="text-dark text-sm">Често още същия ден. Вие се обаждате – ние се грижим за всичко.</p>
         </div>
-        <div class="position-absolute top-0 ms-5 d-none d-lg-block">
-          <svg class="light-blue-color" width="300" height="300">
+        <div class="bg-white text-center px-4 py-6 border border-gray-200 rounded-xl transition-all duration-300 hover:-translate-y-1.5 hover:shadow-xl hover:border-accent">
+          <svg class="text-accent my-3 mx-auto transition-transform duration-300 hover:scale-110" width="32" height="32">
+            <use xlink:href="#cup-first-outline"></use>
+          </svg>
+          <h6 class="mb-2 text-lg font-semibold text-black">Коректни цени</h6>
+          <p class="text-dark text-sm">Без скрити такси. Прозрачно ценообразуване за всички услуги.</p>
+        </div>
+        <div class="bg-white text-center px-4 py-6 border border-gray-200 rounded-xl transition-all duration-300 hover:-translate-y-1.5 hover:shadow-xl hover:border-accent">
+          <svg class="text-accent my-3 mx-auto transition-transform duration-300 hover:scale-110" width="32" height="32">
+            <use xlink:href="#battery-charge-outline"></use>
+          </svg>
+          <h6 class="mb-2 text-lg font-semibold text-black">Опит и професионално оборудване</h6>
+          <p class="text-dark text-sm">Работим с модерна техника и дългогодишен опит в сектора.</p>
+        </div>
+        <div class="bg-white text-center px-4 py-6 border border-gray-200 rounded-xl transition-all duration-300 hover:-translate-y-1.5 hover:shadow-xl hover:border-accent">
+          <svg class="text-accent my-3 mx-auto transition-transform duration-300 hover:scale-110" width="32" height="32">
+            <use xlink:href="#smart-vacuum-cleaner-outline"></use>
+          </svg>
+          <h6 class="mb-2 text-lg font-semibold text-black">Чисто и подредено</h6>
+          <p class="text-dark text-sm">Гарантираме отличен резултат без излишни ангажименти.</p>
+        </div>
+        <div class="bg-white text-center px-4 py-6 border border-gray-200 rounded-xl transition-all duration-300 hover:-translate-y-1.5 hover:shadow-xl hover:border-accent">
+          <svg class="text-accent my-3 mx-auto transition-transform duration-300 hover:scale-110" width="32" height="32">
             <use xlink:href="#call-chat-rounded-outline"></use>
           </svg>
+          <h6 class="mb-2 text-lg font-semibold text-black">Коректно отношение</h6>
+          <p class="text-dark text-sm">Професионален подход към всеки клиент и проект.</p>
+        </div>
+        <div class="bg-white text-center px-4 py-6 border border-gray-200 rounded-xl transition-all duration-300 hover:-translate-y-1.5 hover:shadow-xl hover:border-accent">
+          <svg class="text-accent my-3 mx-auto transition-transform duration-300 hover:scale-110" width="32" height="32">
+            <use xlink:href="#location"></use>
+          </svg>
+          <h6 class="mb-2 text-lg font-semibold text-black">Локално обслужване</h6>
+          <p class="text-dark text-sm">Работим в гр. Павликени и цялата Великотърновска област.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="call" class="my-20 md:my-32">
+    <div class="container mx-auto px-4">
+      <div class="relative rounded-2xl overflow-hidden bg-gradient-to-r from-[#18A7E4] via-[#1BADEC] to-[#0A9CDB]">
+        <div class="grid grid-cols-1 lg:grid-cols-12">
+          <div class="lg:col-span-4 hidden lg:block">
+            <div class="absolute top-0 left-5">
+              <svg class="text-light-blue opacity-20" width="300" height="300">
+                <use xlink:href="#call-chat-rounded-outline"></use>
+              </svg>
+            </div>
+          </div>
+          <div class="lg:col-span-8 relative z-10 py-12 px-6 lg:px-8">
+            <h2 class="text-white text-3xl md:text-4xl font-bold mb-4 drop-shadow-lg">Обадете се сега: 0887 079 976</h2>
+            <p class="text-lg md:text-xl capitalize text-white">Безплатна оферта за всички услуги. Бърза реакция и коректно отношение.</p>
+          </div>
         </div>
       </div>
     </div>
   </section>
 
 
-  <section id="quote" class="bg-gray padding-small margin-medium">
-    <div class="container text-center">
-      <div class="section-title">
-        <h3>Заявка за безплатна оферта</h3>
-        <p class="fs-4 mt-3">Обадете се на <strong>0887 079 976</strong> или попълнете формата по-долу</p>
+  <section id="quote" class="bg-gray-100 py-20 md:py-32 my-20 md:my-32">
+    <div class="container mx-auto px-4 text-center">
+      <div class="mb-8">
+        <h3 class="text-3xl md:text-4xl font-bold text-black mb-4 relative inline-block pb-4 after:content-[''] after:absolute after:bottom-0 after:left-1/2 after:-translate-x-1/2 after:w-16 after:h-1 after:bg-gradient-to-r after:from-primary after:to-accent after:rounded">Заявка за безплатна оферта</h3>
+        <p class="text-lg md:text-xl mt-3 text-dark">Обадете се на <strong class="text-primary">0887 079 976</strong> или попълнете формата по-долу</p>
       </div>
-      <form class="contact-form row mt-5">
-        <div class="col-lg-6 col-md-12 col-sm-12 mb-4">
-          <input type="text" name="name" placeholder="Име" class="w-100 border ps-4 rounded-3">
+      <form class="max-w-4xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-4 mt-8">
+        <div class="md:col-span-1">
+          <input type="text" name="name" placeholder="Име" class="w-full h-[60px] border-2 border-gray-300 px-5 rounded-xl focus:outline-none focus:ring-2 focus:ring-accent focus:border-transparent transition-all duration-300 hover:border-dark">
         </div>
-        <div class="col-lg-6 col-md-12 col-sm-12 mb-4">
-          <input type="email" name="email" placeholder="Имейл" class="w-100 border ps-4 rounded-3">
+        <div class="md:col-span-1">
+          <input type="email" name="email" placeholder="Имейл" class="w-full h-[60px] border-2 border-gray-300 px-5 rounded-xl focus:outline-none focus:ring-2 focus:ring-accent focus:border-transparent transition-all duration-300 hover:border-dark">
         </div>
-        <div class="col-lg-6 col-md-12 col-sm-12 mb-4">
-          <input type="text" name="phone" placeholder="Телефон" class="w-100 border ps-4 rounded-3">
+        <div class="md:col-span-1">
+          <input type="text" name="phone" placeholder="Телефон" class="w-full h-[60px] border-2 border-gray-300 px-5 rounded-xl focus:outline-none focus:ring-2 focus:ring-accent focus:border-transparent transition-all duration-300 hover:border-dark">
         </div>
-        <div class="col-lg-6 col-md-12 col-sm-12 mb-4">
-          <input type="text" name="city" placeholder="Населено място" class="w-100 border ps-4 rounded-3">
+        <div class="md:col-span-1">
+          <input type="text" name="city" placeholder="Населено място" class="w-full h-[60px] border-2 border-gray-300 px-5 rounded-xl focus:outline-none focus:ring-2 focus:ring-accent focus:border-transparent transition-all duration-300 hover:border-dark">
         </div>
-        <div class="col-md-12 col-sm-12 mb-4">
-          <input type="text" name="property" placeholder="Адрес на обекта" class="w-100 border ps-4 rounded-3">
+        <div class="md:col-span-2">
+          <input type="text" name="property" placeholder="Адрес на обекта" class="w-full h-[60px] border-2 border-gray-300 px-5 rounded-xl focus:outline-none focus:ring-2 focus:ring-accent focus:border-transparent transition-all duration-300 hover:border-dark">
         </div>
-        <div class="col-md-12 col-sm-12 mb-4">
-          <select class="form-select focus-transparent w-100 border rounded-3 ps-4" aria-invalid="false"
-            name="choose">
+        <div class="md:col-span-2">
+          <select class="w-full h-[60px] border-2 border-gray-300 rounded-xl px-5 focus:outline-none focus:ring-2 focus:ring-accent focus:border-transparent transition-all duration-300 hover:border-dark" name="choose">
             <option value="Select Your Service">Изберете услуга</option>
             <option value="Service">🌿 Косене и поддръжка на тревни площи</option>
             <option value="Service">🧹 Почистване на дворове, къщи и апартаменти</option>
@@ -546,232 +584,215 @@
             <option value="Service">♻️ Извозване на строителни и битови отпадъци</option>
           </select>
         </div>
-        <div class="col-md-12 col-sm-12 mb-4">
-          <textarea class="w-100 border p-3 ps-4 rounded-3" type="text" name="details" placeholder="Допълнителна информация"></textarea>
+        <div class="md:col-span-2">
+          <textarea class="w-full min-h-[120px] border-2 border-gray-300 p-5 rounded-xl focus:outline-none focus:ring-2 focus:ring-accent focus:border-transparent transition-all duration-300 hover:border-dark" name="details" placeholder="Допълнителна информация"></textarea>
         </div>
       </form>
-      <a href="tel:0887079976" class="btn btn-medium btn-primary btn-pill mt-3 text-uppercase">Изпрати</a>
-      <p class="mt-4">Или се обадете директно: <a href="tel:0887079976" class="fw-bold text-primary">0887 079 976</a></p>
+      <a href="tel:0887079976" class="inline-block px-8 py-3.5 bg-gradient-to-r from-primary to-[#FF9F40] text-white uppercase font-semibold rounded-full shadow-lg hover:shadow-xl hover:-translate-y-0.5 transition-all duration-300 hover:from-accent hover:to-[#1BB8F5] mt-6">Изпрати</a>
+      <p class="mt-6 text-dark">Или се обадете директно: <a href="tel:0887079976" class="font-bold text-primary hover:text-accent transition-colors">0887 079 976</a></p>
     </div>
   </section>
 
 
-  <section id="faqs" class="bg-gray padding-small margin-medium mb-0">
-    <div class="container">
-      <div class="row">
-        <div class="col-md-8 offset-md-2 accordion" id="accordion">
-          <div class="accordion-item border-0 rounded-3 mb-3">
-            <h5 class="text-capitalize fw-regular accordion-header">
-              <button
-              class="accordion-button bg-transparent focus-transparent text-capitalize shadow-none"
-                type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true"
-                aria-controls="collapseOne">
+  <section id="faqs" class="bg-gray-100 py-20 md:py-32 my-20 md:my-32 mb-0">
+    <div class="container mx-auto px-4">
+      <div class="max-w-3xl mx-auto">
+        <div class="accordion" id="accordion">
+          <div class="bg-white border-0 rounded-xl mb-3 shadow-sm hover:shadow-md transition-shadow duration-300">
+            <h5 class="accordion-header">
+              <button class="accordion-button bg-transparent focus:outline-none capitalize shadow-none w-full text-left px-6 py-4 rounded-xl transition-colors duration-300 hover:bg-accent/5" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
                 В кои райони работите?
               </button>
             </h5>
             <div id="collapseOne" class="accordion-collapse border-0 collapse show" data-bs-parent="#accordion">
-              <div class="accordion-body pt-0">
-                <p>Работим в гр. Павликени и цялата Великотърновска област. Обслужваме както частни лица, така и фирми.</p>
+              <div class="accordion-body pt-0 px-6 pb-4">
+                <p class="text-dark">Работим в гр. Павликени и цялата Великотърновска област. Обслужваме както частни лица, така и фирми.</p>
               </div>
             </div>
           </div>
-          <div class="accordion-item border-0 rounded-3 mb-3">
-            <h5 class="text-capitalize fw-regular accordion-header">
-              <button
-                class="accordion-button bg-transparent collapsed focus-transparent text-capitalize shadow-none"
-                type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false"
-                aria-controls="collapseTwo">
+          <div class="bg-white border-0 rounded-xl mb-3 shadow-sm hover:shadow-md transition-shadow duration-300">
+            <h5 class="accordion-header">
+              <button class="accordion-button bg-transparent collapsed focus:outline-none capitalize shadow-none w-full text-left px-6 py-4 rounded-xl transition-colors duration-300 hover:bg-accent/5" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
                 Колко бързо можете да реагирате?
               </button>
             </h5>
             <div id="collapseTwo" class="accordion-collapse collapse" data-bs-parent="#accordion">
-              <div class="accordion-body pt-0">
-                <p>Осигуряваме бърза реакция - често още същия ден. Просто се обадете на 0887 079 976 и ще организираме услугата възможно най-бързо.</p>
+              <div class="accordion-body pt-0 px-6 pb-4">
+                <p class="text-dark">Осигуряваме бърза реакция - често още същия ден. Просто се обадете на 0887 079 976 и ще организираме услугата възможно най-бързо.</p>
               </div>
             </div>
           </div>
-          <div class="accordion-item border-0 rounded-3 mb-3">
-            <h5 class="text-capitalize fw-regular accordion-header">
-              <button
-                class="accordion-button bg-transparent collapsed focus-transparent text-capitalize shadow-none"
-                type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false"
-                aria-controls="collapseThree">
+          <div class="bg-white border-0 rounded-xl mb-3 shadow-sm hover:shadow-md transition-shadow duration-300">
+            <h5 class="accordion-header">
+              <button class="accordion-button bg-transparent collapsed focus:outline-none capitalize shadow-none w-full text-left px-6 py-4 rounded-xl transition-colors duration-300 hover:bg-accent/5" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
                 Какви са вашите цени?
               </button>
             </h5>
             <div id="collapseThree" class="accordion-collapse collapse" data-bs-parent="#accordion">
-              <div class="accordion-body pt-0">
-                <p>Предлагаме коректни цени без скрити такси. Всяка услуга се оценява индивидуално според обема и сложността на работата. Свържете се с нас за безплатна оферта.</p>
+              <div class="accordion-body pt-0 px-6 pb-4">
+                <p class="text-dark">Предлагаме коректни цени без скрити такси. Всяка услуга се оценява индивидуално според обема и сложността на работата. Свържете се с нас за безплатна оферта.</p>
               </div>
             </div>
           </div>
-          <div class="accordion-item border-0 rounded-3 mb-3">
-            <h5 class="text-capitalize fw-regular accordion-header">
-              <button
-                class="accordion-button bg-transparent collapsed focus-transparent text-capitalize shadow-none"
-                type="button" data-bs-toggle="collapse" data-bs-target="#collapseFour" aria-expanded="false"
-                aria-controls="collapseFour">
+          <div class="bg-white border-0 rounded-xl mb-3 shadow-sm hover:shadow-md transition-shadow duration-300">
+            <h5 class="accordion-header">
+              <button class="accordion-button bg-transparent collapsed focus:outline-none capitalize shadow-none w-full text-left px-6 py-4 rounded-xl transition-colors duration-300 hover:bg-accent/5" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFour" aria-expanded="false" aria-controls="collapseFour">
                 Имате ли професионално оборудване?
               </button>
             </h5>
             <div id="collapseFour" class="accordion-collapse collapse" data-bs-parent="#accordion">
-              <div class="accordion-body pt-0">
-                <p>Да, работим с професионално оборудване за всички услуги - косене, почистване, транспорт с бус и самосвал. Не е необходимо да осигурявате оборудване.</p>
+              <div class="accordion-body pt-0 px-6 pb-4">
+                <p class="text-dark">Да, работим с професионално оборудване за всички услуги - косене, почистване, транспорт с бус и самосвал. Не е необходимо да осигурявате оборудване.</p>
               </div>
             </div>
           </div>
-          <div class="accordion-item border-0 rounded-3 mb-3">
-            <h5 class="text-capitalize fw-regular accordion-header">
-              <button
-                class="accordion-button bg-transparent collapsed focus-transparent text-capitalize shadow-none"
-                type="button" data-bs-toggle="collapse" data-bs-target="#collapseFive" aria-expanded="false"
-                aria-controls="collapseFive">
+          <div class="bg-white border-0 rounded-xl mb-3 shadow-sm hover:shadow-md transition-shadow duration-300">
+            <h5 class="accordion-header">
+              <button class="accordion-button bg-transparent collapsed focus:outline-none capitalize shadow-none w-full text-left px-6 py-4 rounded-xl transition-colors duration-300 hover:bg-accent/5" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFive" aria-expanded="false" aria-controls="collapseFive">
                 До къде извозвате отпадъците?
               </button>
             </h5>
             <div id="collapseFive" class="accordion-collapse collapse" data-bs-parent="#accordion">
-              <div class="accordion-body pt-0">
-                <p>Извозваме всички отпадъци само до регламентирани депа, в съответствие с всички екологични и правни изисквания.</p>
+              <div class="accordion-body pt-0 px-6 pb-4">
+                <p class="text-dark">Извозваме всички отпадъци само до регламентирани депа, в съответствие с всички екологични и правни изисквания.</p>
               </div>
             </div>
           </div>
         </div>
-        <div class="col-md-2">          
-        </div>
       </div>
     </div>
   </section>
 
-  <section id="contact-info" class="py-5 bg-accent-gradient">
-    <div class="container">
-      <div class="row">
-        <div class="col-md-4 d-flex align-items-center">
-          <svg class="star me-1 light-blue-color" width="90" height="90">
+  <section id="contact-info" class="py-12 bg-gradient-to-r from-[#18A7E4] via-[#1BADEC] to-[#0A9CDB]">
+    <div class="container mx-auto px-4">
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+        <div class="flex items-center group">
+          <svg class="text-light-blue mr-3 transition-all duration-300 group-hover:scale-110 group-hover:rotate-6" width="90" height="90">
             <use xlink:href="#call-chat-rounded-outline" />
           </svg>
-          <div class="contact-info-text ms-3">
-            <h5 class="text-light mb-0">Обадете се</h5>
-            <h5 class="fw-light text-light"><a href="tel:0887079976" class="text-light text-decoration-none">0887 079 976</a></h5>
+          <div class="ml-3">
+            <h5 class="text-white mb-0 font-semibold">Обадете се</h5>
+            <h5 class="font-light text-white"><a href="tel:0887079976" class="text-white no-underline hover:text-light-blue transition-colors">0887 079 976</a></h5>
           </div>
         </div>
-        <div class="col-md-4 d-flex align-items-center">
-          <svg class="star me-1 light-blue-color" width="90" height="90">
+        <div class="flex items-center group">
+          <svg class="text-light-blue mr-3 transition-all duration-300 group-hover:scale-110 group-hover:rotate-6" width="90" height="90">
             <use xlink:href="#point-on-map-outline" />
           </svg>
-          <div class="contact-info-text ms-3">
-            <h5 class="text-light mb-0">Район на обслужване</h5>
-            <h5 class="fw-light text-light">гр. Павликени и Великотърновска област</h5>
+          <div class="ml-3">
+            <h5 class="text-white mb-0 font-semibold">Район на обслужване</h5>
+            <h5 class="font-light text-white">гр. Павликени и Великотърновска област</h5>
           </div>
         </div>
-        <div class="col-md-4 d-flex align-items-center">
-          <svg class="star me-1 light-blue-color" width="90" height="90">
+        <div class="flex items-center group">
+          <svg class="text-light-blue mr-3 transition-all duration-300 group-hover:scale-110 group-hover:rotate-6" width="90" height="90">
             <use xlink:href="#pen-new-round-outline" />
           </svg>
-          <div class="contact-info-text ms-3">
-            <h5 class="text-light mb-0">Безплатна оферта</h5>
-            <h5 class="fw-light text-light text-decoration-underline"><a href="#quote" class="text-light">Заявка за оферта</a></h5>
+          <div class="ml-3">
+            <h5 class="text-white mb-0 font-semibold">Безплатна оферта</h5>
+            <h5 class="font-light text-white underline"><a href="#quote" class="text-white hover:text-light-blue transition-colors">Заявка за оферта</a></h5>
           </div>
         </div>
       </div>
     </div>
   </section>
 
-  <footer id="footer">
-    <div class="container padding-medium pb-5">
-      <div class="row flex-wrap justify-content-between">
-        <div class="col-lg-3 col-md-6 col-sm-6 pb-3">
+  <footer id="footer" class="bg-gradient-to-b from-white to-gray-100">
+    <div class="container mx-auto px-4 py-20 pb-12">
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+        <div class="pb-6">
           <div class="footer-menu">
-            <h6 class="widget-title pb-2 fw-semibold">Услуги</h6>
-            <ul class="menu-list d-flex flex-column list-unstyled">
-              <li class="pb-2">
-                <a href="#about-us">За нас</a>
+            <h6 class="font-semibold text-lg pb-2 mb-4 text-black">Услуги</h6>
+            <ul class="flex flex-col gap-2 list-none p-0 m-0">
+              <li>
+                <a href="#about-us" class="text-dark hover:text-primary transition-all duration-300 inline-block hover:translate-x-1">За нас</a>
               </li>
-              <li class="pb-2">
-                <a href="#our-services">Нашите услуги</a>
+              <li>
+                <a href="#our-services" class="text-dark hover:text-primary transition-all duration-300 inline-block hover:translate-x-1">Нашите услуги</a>
               </li>
-              <li class="pb-2">
-                <a href="#features">Защо да изберете нас</a>
+              <li>
+                <a href="#features" class="text-dark hover:text-primary transition-all duration-300 inline-block hover:translate-x-1">Защо да изберете нас</a>
               </li>
-              <li class="pb-2">
-                <a href="#quote">Контакт</a>
+              <li>
+                <a href="#quote" class="text-dark hover:text-primary transition-all duration-300 inline-block hover:translate-x-1">Контакт</a>
               </li>
             </ul>
           </div>
         </div>
-        <div class="col-lg-3 col-md-6 col-sm-6 pb-3">
+        <div class="pb-6">
           <div class="footer-menu">
-            <h6 class="widget-title pb-2 fw-semibold">Услуги</h6>
-            <ul class="menu-list d-flex flex-column list-unstyled">
-              <li class="pb-2">
-                <a href="#our-services">🌿 Косене и поддръжка</a>
+            <h6 class="font-semibold text-lg pb-2 mb-4 text-black">Услуги</h6>
+            <ul class="flex flex-col gap-2 list-none p-0 m-0">
+              <li>
+                <a href="#our-services" class="text-dark hover:text-primary transition-all duration-300 inline-block hover:translate-x-1">🌿 Косене и поддръжка</a>
               </li>
-              <li class="pb-2">
-                <a href="#our-services">🧹 Почистване</a>
+              <li>
+                <a href="#our-services" class="text-dark hover:text-primary transition-all duration-300 inline-block hover:translate-x-1">🧹 Почистване</a>
               </li>
-              <li class="pb-2">
-                <a href="#our-services">🌳 Рязане на дървета</a>
+              <li>
+                <a href="#our-services" class="text-dark hover:text-primary transition-all duration-300 inline-block hover:translate-x-1">🌳 Рязане на дървета</a>
               </li>
-              <li class="pb-2">
-                <a href="#our-services">🚐 Услуги с бус</a>
+              <li>
+                <a href="#our-services" class="text-dark hover:text-primary transition-all duration-300 inline-block hover:translate-x-1">🚐 Услуги с бус</a>
               </li>
-              <li class="pb-2">
-                <a href="#our-services">🚚 Услуги със самосвал</a>
+              <li>
+                <a href="#our-services" class="text-dark hover:text-primary transition-all duration-300 inline-block hover:translate-x-1">🚚 Услуги със самосвал</a>
               </li>
-              <li class="pb-2">
-                <a href="#our-services">♻️ Извозване на отпадъци</a>
+              <li>
+                <a href="#our-services" class="text-dark hover:text-primary transition-all duration-300 inline-block hover:translate-x-1">♻️ Извозване на отпадъци</a>
               </li>
             </ul>
           </div>
         </div>
-        <div class="col-lg-3 col-md-6 col-sm-6 pb-3">
+        <div class="pb-6">
           <div class="footer-menu">
-            <h6 class="widget-title pb-2 fw-semibold">Информация</h6>
-            <ul class="menu-list d-flex flex-column list-unstyled">
-              <li class="pb-2">
-                <a href="#faqs">Често задавани въпроси</a>
+            <h6 class="font-semibold text-lg pb-2 mb-4 text-black">Информация</h6>
+            <ul class="flex flex-col gap-2 list-none p-0 m-0">
+              <li>
+                <a href="#faqs" class="text-dark hover:text-primary transition-all duration-300 inline-block hover:translate-x-1">Често задавани въпроси</a>
               </li>
-              <li class="pb-2">
-                <a href="#quote">Свържете се с нас</a>
+              <li>
+                <a href="#quote" class="text-dark hover:text-primary transition-all duration-300 inline-block hover:translate-x-1">Свържете се с нас</a>
               </li>
-              <li class="pb-2">
-                <a href="#about-us">За нас</a>
+              <li>
+                <a href="#about-us" class="text-dark hover:text-primary transition-all duration-300 inline-block hover:translate-x-1">За нас</a>
               </li>
             </ul>
           </div>
         </div>
-        <div class="col-lg-3 col-md-6 col-sm-6 pb-3">
+        <div class="pb-6">
           <div class="footer-menu">
-            <h6 class="widget-title pb-2 fw-semibold">Заявка за услуга</h6>
-            <p>Обадете се за безплатна оферта и бърза реакция.</p>
-            <a class="btn btn-primary" href="#quote">Заявка за оферта</a>
-            <h5 class="text-capitalize fw-light mt-3">Телефон: <a class="fw-semibold text-black" href="tel:0887079976">0887 079 976</a> </h5>
+            <h6 class="font-semibold text-lg pb-2 mb-4 text-black">Заявка за услуга</h6>
+            <p class="text-dark mb-4">Обадете се за безплатна оферта и бърза реакция.</p>
+            <a class="inline-block px-6 py-3 bg-gradient-to-r from-primary to-[#FF9F40] text-white uppercase font-semibold rounded-full shadow-lg hover:shadow-xl hover:-translate-y-0.5 transition-all duration-300 hover:from-accent hover:to-[#1BB8F5] mb-4" href="#quote">Заявка за оферта</a>
+            <h5 class="capitalize font-light mt-4 text-base">Телефон: <a class="font-semibold text-black hover:text-primary transition-colors" href="tel:0887079976">0887 079 976</a></h5>
           </div>
         </div>
       </div>
     </div>
-    <div class="bg-gray">
-      <div class="container footer-bottom d-md-flex text-center justify-content-between py-4">
-        <p class="mb-0">© 2024 Услуги за двор, почистване и транспорт - гр. Павликени и Великотърновска област</p>
-        <p class="mb-0">Телефон: <a href="tel:0887079976" class="text-decoration-underline fw-semibold">0887 079 976</a></p>
+    <div class="bg-gray-100 border-t border-gray-200">
+      <div class="container mx-auto px-4 py-4 flex flex-col md:flex-row justify-between items-center text-center gap-4">
+        <p class="mb-0 text-dark text-sm">© 2024 Услуги за двор, почистване и транспорт - гр. Павликени и Великотърновска област</p>
+        <p class="mb-0 text-dark text-sm">Телефон: <a href="tel:0887079976" class="underline font-semibold hover:text-primary transition-colors">0887 079 976</a></p>
       </div>
     </div>
   </footer>
 
   <!-- Video Popup -->
-  <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
-    <div class="modal-dialog" role="document">
-
-        <div class="modal-content">
-          
-            <div class="modal-body">
-                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"><svg class="bi" width="40" height="40"><use xlink:href="#close-sharp"></use></svg></button>
-                <div class="ratio ratio-16x9">
-                  <iframe class="embed-responsive-item" src="" id="video"  allowscriptaccess="always" allow="autoplay"></iframe>
+  <div class="modal fade fixed inset-0 z-50 hidden overflow-y-auto" id="myModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog relative w-auto max-w-4xl mx-auto my-8" role="document">
+        <div class="modal-content relative bg-white rounded-lg shadow-xl p-0">
+            <div class="modal-body p-0">
+                <button type="button" class="absolute top-4 right-4 z-10 bg-white/80 hover:bg-white rounded-full p-2 transition-colors" data-bs-dismiss="modal" aria-label="Close">
+                  <svg class="w-6 h-6 text-dark" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path>
+                  </svg>
+                </button>
+                <div class="relative pb-[56.25%] h-0 overflow-hidden">
+                  <iframe class="absolute top-0 left-0 w-full h-full" src="" id="video" allowscriptaccess="always" allow="autoplay"></iframe>
                 </div>
             </div>
-
         </div>
-
     </div>
   </div>
 
