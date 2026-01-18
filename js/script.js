@@ -1,78 +1,63 @@
-(function($) {
+"use strict";
 
-    "use strict";
+document.addEventListener("DOMContentLoaded", () => {
+  const videoModal = document.getElementById("myModal");
+  const videoFrame = document.getElementById("video");
+  let videoSrc = "";
 
-    $(document).ready(function() {
+  document.querySelectorAll(".play-btn").forEach((button) => {
+    button.addEventListener("click", () => {
+      videoSrc = button.getAttribute("data-src") || "";
+    });
+  });
 
-      /* Video */
-      var $videoSrc;  
-        $('.play-btn').click(function() {
-          $videoSrc = $(this).data( "src" );
-        });
+  if (videoModal && videoFrame) {
+    videoModal.addEventListener("shown.bs.modal", () => {
+      if (!videoSrc) return;
+      videoFrame.setAttribute(
+        "src",
+        `${videoSrc}?autoplay=1&modestbranding=1&showinfo=0`
+      );
+    });
 
-        $('#myModal').on('shown.bs.modal', function (e) {
+    videoModal.addEventListener("hide.bs.modal", () => {
+      videoFrame.setAttribute("src", videoSrc);
+    });
+  }
 
-        $("#video").attr('src',$videoSrc + "?autoplay=1&amp;modestbranding=1&amp;showinfo=0" ); 
-      })
+  if (document.querySelector(".slider")) {
+    new Swiper(".slider", {
+      effect: "fade",
+      navigation: {
+        nextEl: ".main-slider-button-next",
+        prevEl: ".main-slider-button-prev",
+      },
+    });
+  }
 
-      $('#myModal').on('hide.bs.modal', function (e) {
-        $("#video").attr('src',$videoSrc); 
-      })
-        
-      var swiper = new Swiper(".slider", {
-        effect: "fade",
-        navigation: {
-          nextEl: ".main-slider-button-next",
-          prevEl: ".main-slider-button-prev",
+  if (document.querySelector(".services-swiper")) {
+    new Swiper(".services-swiper", {
+      slidesPerView: 5,
+      spaceBetween: 120,
+      freeMode: true,
+      pagination: {
+        el: ".services-pagination",
+        clickable: true,
+      },
+      breakpoints: {
+        0: {
+          slidesPerView: 1,
         },
-      });
-
-      var swiper = new Swiper(".testimonial-swiper", {
-        slidesPerView: 3,
-        spaceBetween: 20,
-        pagination: {
-          el: ".swiper-pagination",
-          clickable: true,
+        572: {
+          slidesPerView: 3,
         },
-        breakpoints: {
-          0: {
-            slidesPerView: 1,
-          },
-          640: {
-            slidesPerView: 2,
-          },
-          1024: {
-            slidesPerView: 3,
-          },
+        1024: {
+          slidesPerView: 4,
         },
-      });
-
-      var swiper = new Swiper(".services-swiper", {
-        slidesPerView: 5,
-        spaceBetween: 120,
-        freeMode: true,
-        pagination: {
-          el: ".services-pagination",
-          clickable: true,
+        1280: {
+          slidesPerView: 5,
         },
-        breakpoints: {
-          0: {
-            slidesPerView: 1,
-          },
-          572: {
-            slidesPerView: 3,
-          },
-          1024: {
-            slidesPerView: 4,
-          },
-          1280: {
-            slidesPerView: 5,
-          },
-        },
-      });
-
-      new DateTimePickerComponent.DatePicker('select-date');
-
-    }); // End of a document
-
-})(jQuery);
+      },
+    });
+  }
+});
