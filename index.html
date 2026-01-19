@@ -273,27 +273,60 @@
 
   <section id="about-us" class="relative bg-gray-100 py-20 md:py-32">
     <div class="container mx-auto px-4">
-      <div class="grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
-
-        <div class="md:pr-4">
-          <div class="rounded-2xl overflow-hidden shadow-xl hover:shadow-2xl transition-all duration-300 hover:-translate-y-1">
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-10 items-center">
+        <div class="lg:col-span-6">
+          <div class="relative rounded-2xl overflow-hidden shadow-xl bg-white">
             <a type="button" data-bs-toggle="modal" data-src="https://www.youtube.com/embed/W_tIumKa8VY" data-bs-target="#myModal" class="block relative group">
-              <img class="w-full h-auto transition-transform duration-300 group-hover:scale-105" src="images/about.png" alt="img">
-              <div class="absolute inset-0 bg-accent/10 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+              <img class="w-full h-auto transition-transform duration-300 group-hover:scale-105" src="images/about.png" alt="Екип и оборудване">
+              <div class="absolute inset-0 bg-gradient-to-tr from-black/10 to-accent/10 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+              <div class="absolute bottom-4 left-4 bg-white/90 backdrop-blur px-4 py-2 rounded-full text-xs uppercase tracking-wide text-dark shadow">Гледай видео</div>
             </a>
           </div>
-        </div>
-        
-        <div class="md:mt-0 mt-8">
-          <div class="mb-6">
-            <p class="mb-2 text-lg text-primary capitalize">За нас</p>
-            <h3 class="text-3xl md:text-4xl font-bold text-black mb-4 relative pb-4 after:content-[''] after:absolute after:bottom-0 after:left-1/2 after:-translate-x-1/2 after:w-16 after:h-1 after:bg-gradient-to-r after:from-primary after:to-accent after:rounded">Бързи и надеждни услуги</h3>
+          <div class="grid grid-cols-3 gap-3 mt-4 text-center">
+            <div class="bg-white rounded-xl p-4 shadow-sm border border-gray-200">
+              <p class="text-2xl font-bold text-black">24ч</p>
+              <p class="text-xs uppercase text-dark">Бърза реакция</p>
+            </div>
+            <div class="bg-white rounded-xl p-4 shadow-sm border border-gray-200">
+              <p class="text-2xl font-bold text-black">100%</p>
+              <p class="text-xs uppercase text-dark">Коректност</p>
+            </div>
+            <div class="bg-white rounded-xl p-4 shadow-sm border border-gray-200">
+              <p class="text-2xl font-bold text-black">5+</p>
+              <p class="text-xs uppercase text-dark">Услуги</p>
+            </div>
           </div>
-          <p class="text-dark leading-relaxed mb-4">Търсите качествено косене, почистване или извозване? Ние сме правилният избор, когато имате нужда от бърза реакция, коректно отношение и отличен резултат. Работим с частни лица и фирми в гр. Павликени и цялата Търновска област.</p>
-          <p class="text-dark leading-relaxed mb-6">Ние вършим тежката работа – вие се радвате на резултата. С професионално оборудване и опит, гарантираме чисто, подредено и без излишни ангажименти.</p>
-          <a class="inline-block px-8 py-3.5 bg-gradient-to-r from-primary to-[#FF9F40] text-white uppercase font-semibold rounded-full shadow-lg hover:shadow-xl hover:-translate-y-0.5 transition-all duration-300 hover:from-accent hover:to-[#1BB8F5] mt-4" href="#our-services">Нашите услуги</a>
         </div>
-        
+
+        <div class="lg:col-span-6">
+          <p class="text-primary text-lg uppercase tracking-wide mb-2">За нас</p>
+          <h3 class="text-3xl md:text-4xl font-bold text-black mb-4">Бързи и надеждни услуги</h3>
+          <p class="text-dark leading-relaxed mb-5">Осигуряваме професионално косене, почистване, извозване и транспорт в гр. Павликени и цялата Великотърновска област. Работим както с частни лица, така и с фирми, с фокус върху качество и точност.</p>
+          <ul class="space-y-3 mb-6">
+            <li class="flex items-start gap-3">
+              <span class="mt-1 inline-flex h-5 w-5 items-center justify-center rounded-full bg-accent/10 text-accent">
+                ✓
+              </span>
+              <p class="text-dark">Модерна техника и безопасни практики за работа.</p>
+            </li>
+            <li class="flex items-start gap-3">
+              <span class="mt-1 inline-flex h-5 w-5 items-center justify-center rounded-full bg-accent/10 text-accent">
+                ✓
+              </span>
+              <p class="text-dark">Чисто предаване на обекта без излишни ангажименти.</p>
+            </li>
+            <li class="flex items-start gap-3">
+              <span class="mt-1 inline-flex h-5 w-5 items-center justify-center rounded-full bg-accent/10 text-accent">
+                ✓
+              </span>
+              <p class="text-dark">Прозрачни цени и бърза организация на услугата.</p>
+            </li>
+          </ul>
+          <div class="flex flex-wrap gap-4">
+            <a class="inline-block px-8 py-3.5 bg-gradient-to-r from-primary to-[#FF9F40] text-white uppercase font-semibold rounded-full shadow-lg hover:shadow-xl hover:-translate-y-0.5 transition-all duration-300 hover:from-accent hover:to-[#1BB8F5]" href="#our-services">Нашите услуги</a>
+            <a class="inline-flex items-center px-6 py-3 border-2 border-dark text-dark uppercase text-xs font-semibold rounded-full hover:bg-dark hover:text-white transition-all duration-300" href="tel:0887079976">Обади се</a>
+          </div>
+        </div>
       </div>
     </div>
     <img class="pb-5 absolute hidden 2xl:block right-0 bottom-0 w-auto" src="images/bg-pattern-img.png" alt="img">
