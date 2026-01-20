@@ -1,684 +1,1202 @@
-<!DOCTYPE html>
-<html>
+<!doctype html>
+<html lang="bg">
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, viewport-fit=cover"
+    />
+    <title>ЧистоДоКрай | Косене, почистване и извозване в Павликени</title>
+    <meta
+      name="description"
+      content="ЧистоДоКрай – косене на дворове, почистване, рязане на дървета, бус и самосвал в Павликени и Великотърновска област. Бърза реакция и коректни цени."
+    />
+    <meta
+      name="keywords"
+      content="косене Павликени, почистване Павликени, рязане на дървета Павликени, самосвал Павликени, извозване на отпадъци Велико Търново"
+    />
+    <link rel="preload" href="images/logo.png" as="image" />
+    <meta property="og:title" content="ЧистоДоКрай | Косене, почистване и извозване в Павликени" />
+    <meta
+      property="og:description"
+      content="Косене, почистване, рязане на дървета, самосвал и транспорт в Павликени и Великотърновска област."
+    />
+    <meta property="og:type" content="website" />
+    <meta property="og:locale" content="bg_BG" />
+    <meta property="og:image" content="images/logo.png" />
 
-<head>
-  <title>Услуги за двор, почистване и транспорт - Павликени и Великотърновска област</title>
-  <meta charset="utf-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="format-detection" content="telephone=no">
-  <meta name="apple-mobile-web-app-capable" content="yes">
-  <meta name="author" content="">
-  <meta name="keywords" content="косене двор, почистване, извозване, транспорт, Павликени, Велико Търново, рязане дървета, самосвал, бус">
-  <meta name="description" content="Бързи и надеждни услуги за двор, почистване и транспорт в гр. Павликени и Великотърновска област. Косене, почистване, извозване, транспорт с бус и самосвал.">
-  <script src="https://cdn.tailwindcss.com"></script>
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css" />
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600;1,700&family=Source+Sans+3:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
-  <script>
-    tailwind.config = {
-      theme: {
-        extend: {
-          colors: {
-            'accent': '#14ADEF',
-            'primary': '#EE8E1E',
-            'dark': '#666A6C',
-            'light-black': '#343536',
-            'black': '#2C2E2F',
-            'light-blue': '#5BC4F1',
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              brandGreen: "#22c55e",
+              brandBlue: "#2563eb",
+            },
+            boxShadow: {
+              soft: "0 10px 30px rgba(15, 23, 42, 0.08)",
+            },
           },
-          fontFamily: {
-            'heading': ['Source Sans 3', 'sans-serif'],
-            'body': ['Lora', 'serif'],
-          },
-        }
+        },
+      };
+    </script>
+    <!-- TailwindCSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+      html {
+        scroll-behavior: smooth;
       }
-    }
-  </script>
-  <style>
-    html { scroll-behavior: smooth; }
-    body { font-family: 'Lora', serif; }
-    h1, h2, h3, h4, h5, h6 { font-family: 'Source Sans 3', sans-serif; text-transform: uppercase; }
-  </style>
-</head>
+      :root {
+        --brand-green: #22c55e;
+        --brand-blue: #2563eb;
+      }
+      .bg-brandGreen {
+        background-color: var(--brand-green) !important;
+      }
+      .text-brandGreen {
+        color: var(--brand-green) !important;
+      }
+      .border-brandGreen {
+        border-color: var(--brand-green) !important;
+      }
+      .bg-brandBlue {
+        background-color: var(--brand-blue) !important;
+      }
+      .text-brandBlue {
+        color: var(--brand-blue) !important;
+      }
+      .border-brandBlue {
+        border-color: var(--brand-blue) !important;
+      }
+    </style>
+  </head>
+  <body class="bg-white text-slate-900 antialiased">
+    <!-- Sticky Header -->
+    <header class="sticky top-0 z-50 border-b border-slate-100 bg-white/90 shadow-sm backdrop-blur">
+      <div class="mx-auto flex max-w-6xl items-center justify-between px-4 py-0 sm:px-6 lg:px-8">
+        <a href="#" class="flex items-center" aria-label="ЧистоДоКрай начало">
+          <img
+            src="images/logo.png"
+            alt="Лого ЧистоДоКрай"
+            width="480"
+            height="144"
+            class="h-28 w-auto -my-2 sm:h-32 sm:-my-3 md:h-36"
+            loading="eager"
+          />
+        </a>
 
-<body>
+        <nav class="hidden items-center gap-8 text-base font-semibold uppercase tracking-widest text-slate-700 md:flex" aria-label="Основна навигация">
+          <a href="#services" class="transition hover:text-slate-900">Услуги</a>
+          <a href="#gallery" class="transition hover:text-slate-900">Галерия</a>
+          <a href="#area" class="transition hover:text-slate-900">Район</a>
+          <a href="#reviews" class="transition hover:text-slate-900">Процес</a>
+          <a href="#faq" class="transition hover:text-slate-900">ЧЗВ</a>
+          <a href="#contact" class="transition hover:text-slate-900">Контакти</a>
+        </nav>
 
-  <svg xmlns="http://www.w3.org/2000/svg" style="display: none;">
-    <symbol xmlns="http://www.w3.org/2000/svg" id="navbar-icon" viewBox="0 0 16 16">
-      <path
-        d="M14 10.5a.5.5 0 0 0-.5-.5h-3a.5.5 0 0 0 0 1h3a.5.5 0 0 0 .5-.5zm0-3a.5.5 0 0 0-.5-.5h-7a.5.5 0 0 0 0 1h7a.5.5 0 0 0 .5-.5zm0-3a.5.5 0 0 0-.5-.5h-11a.5.5 0 0 0 0 1h11a.5.5 0 0 0 .5-.5z" />
-    </symbol>
-    <symbol xmlns="http://www.w3.org/2000/symbol" id="location" viewBox="0 0 24 24">
-      <path fill="currentColor" fill-rule="evenodd" d="M3.25 10.143C3.25 5.244 7.155 1.25 12 1.25c4.845 0 8.75 3.994 8.75 8.893c0 2.365-.674 4.905-1.866 7.099c-1.19 2.191-2.928 4.095-5.103 5.112a4.2 4.2 0 0 1-3.562 0c-2.175-1.017-3.913-2.92-5.103-5.112c-1.192-2.194-1.866-4.734-1.866-7.099M12 2.75c-3.992 0-7.25 3.297-7.25 7.393c0 2.097.603 4.392 1.684 6.383c1.082 1.993 2.612 3.624 4.42 4.469a2.7 2.7 0 0 0 2.291 0c1.809-.845 3.339-2.476 4.421-4.469c1.081-1.99 1.684-4.286 1.684-6.383c0-4.096-3.258-7.393-7.25-7.393m0 5a2.25 2.25 0 1 0 0 4.5a2.25 2.25 0 0 0 0-4.5M8.25 10a3.75 3.75 0 1 1 7.5 0a3.75 3.75 0 0 1-7.5 0" clip-rule="evenodd"/>
-    </symbol>
-    <symbol xmlns="http://www.w3.org/2000/svg" id="phone" viewBox="0 0 24 24">
-      <path fill="currentColor" fill-rule="evenodd" d="M4.718 3.092c1.226-1.291 3.254-1.05 4.268.384l1.26 1.784c.811 1.147.743 2.74-.225 3.76l-.245.257a.25.25 0 0 0-.002.006c-.013.036-.045.152-.013.372c.067.455.418 1.381 1.846 2.884c1.432 1.508 2.3 1.863 2.703 1.929a.608.608 0 0 0 .294-.007l.408-.43c.874-.92 2.236-1.101 3.335-.469l1.91 1.1c1.633.94 2.013 3.239.708 4.613l-1.42 1.495c-.443.467-1.048.866-1.795.94c-1.824.18-6.049-.055-10.478-4.719c-4.134-4.351-4.919-8.136-5.018-9.985l.666-.036l-.666.036c-.049-.914.358-1.697.894-2.262zm3.043 1.25c-.512-.724-1.433-.768-1.956-.217l-1.57 1.652c-.33.35-.505.75-.483 1.149c.08 1.51.731 4.952 4.607 9.032c4.064 4.28 7.809 4.4 9.244 4.259c.283-.028.575-.186.854-.48l1.42-1.495c.614-.646.453-1.808-.368-2.28l-1.91-1.1c-.513-.295-1.114-.204-1.499.202l-.456.48l-.527-.501c.527.5.527.501.526.502l-.001.001l-.003.004l-.007.006l-.014.014a1.007 1.007 0 0 1-.136.112c-.08.056-.186.119-.321.172c-.276.109-.64.167-1.091.094c-.878-.142-2.028-.773-3.55-2.376c-1.528-1.608-2.113-2.807-2.243-3.7c-.067-.454-.014-.817.084-1.092a1.591 1.591 0 0 1 .23-.427l.03-.037l.014-.015l.006-.007l.003-.003l.002-.001s0-.002.533.503l-.532-.505l.287-.302c.445-.469.51-1.263.088-1.86z" clip-rule="evenodd"/><path fill="currentColor" d="M13.26 1.88a.751.751 0 0 1 .861-.62c.025.005.107.02.15.03c.085.018.204.048.352.09c.297.087.712.23 1.21.458c.996.457 2.321 1.256 3.697 2.631c1.376 1.376 2.175 2.702 2.632 3.698c.228.498.37.912.457 1.21a5.727 5.727 0 0 1 .113.454l.005.031a.765.765 0 0 1-.617.878a.75.75 0 0 1-.86-.617a2.82 2.82 0 0 0-.081-.327a7.395 7.395 0 0 0-.38-1.004c-.39-.85-1.092-2.024-2.33-3.262c-1.237-1.238-2.411-1.939-3.262-2.329a7.394 7.394 0 0 0-1.003-.38a5.749 5.749 0 0 0-.318-.08a.759.759 0 0 1-.626-.861"/><path fill="currentColor" fill-rule="evenodd" d="M13.486 5.33a.75.75 0 0 1 .927-.516l-.206.721l.207-.72h.002l.004.001l.007.002l.02.007a2.995 2.995 0 0 1 .233.089c.146.062.345.158.59.303c.49.29 1.157.77 1.942 1.556c.785.785 1.267 1.453 1.556 1.942c.145.245.241.444.304.59a2.968 2.968 0 0 1 .089.233l.006.02l.002.008l.001.003v.002l-.72.207l.721-.206a.75.75 0 0 1-1.44.422l-.003-.01a3.67 3.67 0 0 0-.25-.504c-.224-.377-.626-.947-1.326-1.647c-.7-.7-1.27-1.102-1.646-1.325a3.674 3.674 0 0 0-.504-.25l-.01-.004a.75.75 0 0 1-.506-.925" clip-rule="evenodd"/>
-    </symbol>
-    <symbol xmlns="http://www.w3.org/2000/svg" id="chevron-back-circle" viewBox="0 0 512 512">
-      <path fill="currentColor" d="M256 48C141.13 48 48 141.13 48 256s93.13 208 208 208s208-93.13 208-208S370.87 48 256 48m35.31 292.69a16 16 0 1 1-22.62 22.62l-96-96a16 16 0 0 1 0-22.62l96-96a16 16 0 0 1 22.62 22.62L206.63 256Z"/>
-    </symbol>
-    <symbol xmlns="http://www.w3.org/2000/svg" id="chevron-forward-circle" viewBox="0 0 512 512">
-      <path fill="currentColor" d="M48 256c0 114.87 93.13 208 208 208s208-93.13 208-208S370.87 48 256 48S48 141.13 48 256m257.37 0l-84.68-84.69a16 16 0 0 1 22.62-22.62l96 96a16 16 0 0 1 0 22.62l-96 96a16 16 0 0 1-22.62-22.62Z"/>
-    </symbol>
-    <symbol xmlns="http://www.w3.org/2000/svg" id="email" viewBox="0 0 24 24">
-      <path fill="currentColor"
-        d="M20 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5l-8-5V6l8 5l8-5v2z" />
-    </symbol>
-    <symbol xmlns="http://www.w3.org/2000/svg" id="clock" viewBox="0 0 24 24">
-      <path fill="currentColor" fill-rule="evenodd" d="M12 2.75a9.25 9.25 0 1 0 0 18.5a9.25 9.25 0 0 0 0-18.5M1.25 12C1.25 6.063 6.063 1.25 12 1.25S22.75 6.063 22.75 12S17.937 22.75 12 22.75S1.25 17.937 1.25 12M12 7.25a.75.75 0 0 1 .75.75v3.69l2.28 2.28a.75.75 0 1 1-1.06 1.06l-2.5-2.5a.75.75 0 0 1-.22-.53V8a.75.75 0 0 1 .75-.75" clip-rule="evenodd"/>
-    </symbol>
-    <symbol xmlns="http://www.w3.org/2000/svg" id="star" viewBox="0 0 512 512">
-      <path fill="currentColor" d="M394 480a16 16 0 0 1-9.39-3L256 383.76L127.39 477a16 16 0 0 1-24.55-18.08L153 310.35L23 221.2a16 16 0 0 1 9-29.2h160.38l48.4-148.95a16 16 0 0 1 30.44 0l48.4 149H480a16 16 0 0 1 9.05 29.2L359 310.35l50.13 148.53A16 16 0 0 1 394 480"/>
-    </symbol>
-    <symbol xmlns="http://www.w3.org/2000/svg" id="play-circle" viewBox="0 0 24 24">
-      <path fill="currentColor" d="m9.5 16.5l7-4.5l-7-4.5zM12 22q-2.075 0-3.9-.788t-3.175-2.137q-1.35-1.35-2.137-3.175T2 12q0-2.075.788-3.9t2.137-3.175q1.35-1.35 3.175-2.137T12 2q2.075 0 3.9.788t3.175 2.137q1.35 1.35 2.138 3.175T22 12q0 2.075-.788 3.9t-2.137 3.175q-1.35 1.35-3.175 2.138T12 22m0-2q3.35 0 5.675-2.325T20 12q0-3.35-2.325-5.675T12 4Q8.65 4 6.325 6.325T4 12q0 3.35 2.325 5.675T12 20m0-8"/>
-    </symbol>
-    <symbol xmlns="http://www.w3.org/2000/svg" id="earth-outline" viewBox="0 0 24 24">
-      <path fill="currentColor" fill-rule="evenodd" d="M5.578 5.343a9.25 9.25 0 0 0 6.803 15.9c-.206-.912-.234-2.138.393-3.319c.652-1.229 2.002-1.762 2.995-2.006a9.183 9.183 0 0 1 1.898-.254h.043c1.673-.018 2.426-.562 2.826-1.08c.342-.444.47-.887.602-1.336l.05-.172A9.22 9.22 0 0 0 18.6 5.519a5.486 5.486 0 0 1-.027.1c-.163.594-.425 1.202-.711 1.636c-.256.388-.752.78-1.164 1.076a9.51 9.51 0 0 1-.902.56c-.228.132-.433.25-.63.38c-.432.286-.766.593-.991 1.056a.665.665 0 0 0-.035.49c.075.272.126.578.126.889c.002.649-.328 1.176-.753 1.518a2.41 2.41 0 0 1-1.521.526c-2.455-.027-3.965-2.02-4.164-4.236c-.08-.881-.466-1.773-.954-2.552a8.838 8.838 0 0 0-1.296-1.62m1.167-.956a10.49 10.49 0 0 1 1.4 1.779c.558.89 1.069 2.012 1.177 3.214c.15 1.68 1.213 2.854 2.686 2.87a.91.91 0 0 0 .563-.194c.146-.117.196-.24.195-.346c0-.156-.026-.328-.072-.495a2.163 2.163 0 0 1 .131-1.542c.385-.794.956-1.285 1.514-1.653c.239-.158.487-.3.71-.43l.09-.05c.255-.148.48-.28.683-.427c.431-.31.704-.557.787-.684c.183-.276.388-.734.518-1.207c.103-.374.131-.662.122-.84A9.207 9.207 0 0 0 12 2.75a9.207 9.207 0 0 0-5.255 1.637M22.68 13.24c.047-.407.071-.82.071-1.24c0-5.937-4.813-10.75-10.75-10.75S1.25 6.063 1.25 12S6.063 22.75 12 22.75c5.46 0 9.97-4.071 10.659-9.344a2.89 2.89 0 0 1 .048-.156zm-2.774 3.567c-.596.218-1.314.348-2.179.357h-.031l-.09.003a7.68 7.68 0 0 0-1.477.208c-.902.221-1.693.62-2.029 1.252c-.456.859-.39 1.793-.22 2.432a9.261 9.261 0 0 0 6.026-4.252" clip-rule="evenodd"/>
-    </symbol>
-    <symbol xmlns="http://www.w3.org/2000/svg" id="cup-first-outline" viewBox="0 0 24 24">
-      <path fill="currentColor" d="M12.787 5.807a.75.75 0 0 1 .463.693v4a.75.75 0 0 1-1.5 0V8.31l-.22.22a.75.75 0 1 1-1.06-1.06l1.5-1.5a.75.75 0 0 1 .817-.163"/><path fill="currentColor" fill-rule="evenodd" d="M7.498 1.607A27.123 27.123 0 0 1 12 1.25c1.828 0 3.339.161 4.502.357l.135.023c1.01.169 1.85.31 2.506 1.118c.421.519.557 1.08.588 1.705l.492.164c.463.154.87.29 1.191.44c.348.162.667.37.911.709c.244.338.341.707.385 1.088c.04.353.04.78.04 1.27v.144c0 .402 0 .757-.03 1.054c-.032.321-.103.634-.28.936c-.179.303-.418.517-.683.701c-.245.17-.555.343-.907.538l-2.64 1.467c-.54 1.061-1.28 2.007-2.3 2.69c-.875.587-1.922.959-3.16 1.065v2.031h1.43a1.75 1.75 0 0 1 1.716 1.407l.219 1.093H18a.75.75 0 0 1 0 1.5H6a.75.75 0 0 1 0-1.5h1.885l.219-1.093A1.75 1.75 0 0 1 9.82 18.75h1.43v-2.031c-1.238-.106-2.285-.478-3.16-1.064c-1.019-.684-1.76-1.63-2.3-2.691l-2.64-1.467a11.148 11.148 0 0 1-.907-.538a2.217 2.217 0 0 1-.682-.7a2.212 2.212 0 0 1-.281-.937c-.03-.297-.03-.652-.03-1.054v-.145c0-.488 0-.916.04-1.269c.044-.381.14-.75.385-1.088c.244-.339.563-.547.91-.71c.323-.15.729-.285 1.192-.439l.492-.164c.031-.626.167-1.186.588-1.705c.657-.809 1.496-.95 2.507-1.118zM9.415 21.25h5.17l-.16-.799a.25.25 0 0 0-.245-.201H9.82a.25.25 0 0 0-.245.201zM4.302 6.023c.072 1.52.243 3.2.671 4.77l-1.066-.591c-.389-.217-.633-.353-.809-.475c-.162-.113-.215-.18-.244-.23c-.03-.05-.062-.128-.082-.324a10.58 10.58 0 0 1-.022-.938v-.073c0-.539.001-.88.03-1.138c.028-.238.072-.327.112-.381c.039-.055.109-.125.326-.226c.236-.11.56-.219 1.07-.39zm14.725 4.77l1.066-.591c.389-.217.633-.353.809-.475c.162-.113.215-.18.244-.23c.03-.05.062-.128.082-.324c.021-.214.022-.493.022-.938v-.073c0-.539-.001-.88-.03-1.138c-.028-.238-.072-.327-.112-.381c-.039-.055-.109-.125-.326-.226c-.236-.11-.56-.219-1.07-.39l-.014-.004c-.071 1.52-.243 3.2-.67 4.77M12 2.75c-1.74 0-3.167.153-4.252.336c-1.207.204-1.46.28-1.726.608c-.262.322-.287.628-.234 1.983c.09 2.258.388 4.696 1.31 6.55c.456.914 1.052 1.662 1.828 2.182c.77.517 1.765.841 3.074.841c1.31 0 2.304-.324 3.075-.841c.776-.52 1.371-1.268 1.826-2.183c.923-1.853 1.221-4.29 1.31-6.55c.055-1.354.03-1.66-.232-1.982c-.266-.328-.52-.404-1.727-.608A25.627 25.627 0 0 0 12 2.75" clip-rule="evenodd"/>
-    </symbol>
-    <symbol xmlns="http://www.w3.org/2000/svg" id="call-chat-rounded-outline" viewBox="0 0 24 24">
-      <g fill="currentColor" fill-rule="evenodd" clip-rule="evenodd"><path d="M22.75 7a5.75 5.75 0 1 0-10.9 2.56a.129.129 0 0 1 .013.04v.007l-.297 1.113a1.4 1.4 0 0 0 1.714 1.714l1.113-.298c-.002 0-.001 0 0 0h.007a.126.126 0 0 1 .04.014A5.75 5.75 0 0 0 22.75 7m-8.356 5.136h-.002zM17 2.75a4.25 4.25 0 1 1-1.892 8.057a1.567 1.567 0 0 0-1.102-.12l-.946.253l.253-.946a1.566 1.566 0 0 0-.12-1.102A4.25 4.25 0 0 1 17 2.75"/><path d="M3.007 6.407c1.68-1.68 4.516-1.552 5.685.544l.65 1.163c.763 1.368.438 3.095-.68 4.227a.63.63 0 0 0-.104.337c-.013.256.078.849.997 1.767c.918.918 1.51 1.01 1.767.997a.63.63 0 0 0 .337-.104c1.131-1.118 2.859-1.443 4.227-.68l1.163.65c2.096 1.17 2.224 4.005.544 5.685c-.899.898-2.094 1.697-3.498 1.75c-2.08.079-5.536-.459-8.958-3.88c-3.421-3.422-3.959-6.877-3.88-8.958c.053-1.405.852-2.6 1.75-3.498m4.376 1.275c-.6-1.074-2.21-1.32-3.315-.214c-.775.775-1.28 1.63-1.312 2.493c-.066 1.736.363 4.762 3.442 7.841c3.08 3.08 6.105 3.508 7.84 3.442c.863-.033 1.72-.537 2.494-1.312c1.106-1.106.86-2.716-.214-3.315l-1.163-.649c-.723-.403-1.74-.266-2.452.448c-.07.07-.517.486-1.308.524c-.81.04-1.791-.324-2.9-1.434c-1.111-1.11-1.475-2.091-1.435-2.902c.038-.791.455-1.237.524-1.306c.714-.714.851-1.73.448-2.453z"/></g>
-    </symbol>
-    <symbol xmlns="http://www.w3.org/2000/svg" id="battery-charge-outline" viewBox="0 0 24 24">
-      <path fill="currentColor" d="M12.076 9.48a.75.75 0 0 0-1.152-.96l-2.5 3A.75.75 0 0 0 9 12.75h1.899l-1.475 1.77a.75.75 0 1 0 1.152.96l2.5-3a.75.75 0 0 0-.576-1.23h-1.899z"/><path fill="currentColor" fill-rule="evenodd" d="M9.944 3.25h1.612c1.838 0 3.294 0 4.433.153c1.172.158 2.121.49 2.87 1.238c.748.749 1.08 1.698 1.238 2.87c.069.513.107 1.091.128 1.74c.362 0 .695.005.972.042c.356.048.731.16 1.04.47c.31.309.422.684.47 1.04c.043.323.043.72.043 1.152v.09c0 .433 0 .83-.043 1.152c-.048.356-.16.731-.47 1.04c-.309.31-.684.422-1.04.47c-.277.037-.61.042-.972.043c-.021.648-.06 1.226-.128 1.739c-.158 1.172-.49 2.121-1.238 2.87c-.749.748-1.698 1.08-2.87 1.238c-1.14.153-2.595.153-4.433.153H9.945c-1.838 0-3.294 0-4.433-.153c-1.172-.158-2.121-.49-2.87-1.238c-.748-.749-1.08-1.698-1.238-2.87c-.153-1.14-.153-2.595-.153-4.433v-.112c0-1.838 0-3.294.153-4.433c.158-1.172.49-2.121 1.238-2.87c.749-.748 1.698-1.08 2.87-1.238c1.14-.153 2.595-.153 4.433-.153M5.71 4.89c-1.006.135-1.586.389-2.01.812c-.422.423-.676 1.003-.811 2.009c-.138 1.028-.14 2.382-.14 4.289c0 1.907.002 3.262.14 4.29c.135 1.005.389 1.585.812 2.008c.423.423 1.003.677 2.009.812c1.028.138 2.382.14 4.289.14h1.5c1.907 0 3.262-.002 4.29-.14c1.005-.135 1.585-.389 2.008-.812c.423-.423.677-1.003.812-2.009c.138-1.028.14-2.382.14-4.289c0-1.907-.002-3.261-.14-4.29c-.135-1.005-.389-1.585-.812-2.008c-.423-.423-1.003-.677-2.009-.812c-1.027-.138-2.382-.14-4.289-.14H10c-1.907 0-3.261.002-4.29.14m15.039 5.87v2.48c.095-.004.176-.01.247-.02a.702.702 0 0 0 .177-.042l.003-.001l.001-.003a.702.702 0 0 0 .042-.177c.028-.21.03-.504.03-.997s-.002-.787-.03-.997a.702.702 0 0 0-.042-.177l-.001-.003l-.003-.001a.702.702 0 0 0-.177-.042a2.865 2.865 0 0 0-.247-.02" clip-rule="evenodd"/>
-    </symbol>
-    <symbol xmlns="http://www.w3.org/2000/svg" id="smart-vacuum-cleaner-outline" viewBox="0 0 24 24">
-      <path fill="currentColor" fill-rule="evenodd" d="M12 2.75a9.25 9.25 0 1 0 0 18.5a9.25 9.25 0 0 0 0-18.5M1.25 12C1.25 6.063 6.063 1.25 12 1.25S22.75 6.063 22.75 12c0 1.64-.367 3.195-1.025 4.586a3.75 3.75 0 0 1-5.14 5.14A10.709 10.709 0 0 1 12 22.75c-1.64 0-3.195-.367-4.586-1.025a3.75 3.75 0 0 1-5.14-5.14A10.709 10.709 0 0 1 1.25 12m2.012 6.263a2.25 2.25 0 0 0 2.475 2.475a10.811 10.811 0 0 1-2.475-2.475m15.002 2.475a2.25 2.25 0 0 0 2.474-2.474a10.812 10.812 0 0 1-2.474 2.474M12 6.75a2.25 2.25 0 1 0 0 4.5a2.25 2.25 0 0 0 0-4.5M8.25 9a3.75 3.75 0 1 1 7.5 0a3.75 3.75 0 0 1-7.5 0M12 15.25a.75.75 0 0 1 .75.75v2a.75.75 0 0 1-1.5 0v-2a.75.75 0 0 1 .75-.75" clip-rule="evenodd"/>
-    </symbol>
-    <symbol xmlns="http://www.w3.org/2000/svg" id="calendar-outline" viewBox="0 0 24 24">
-      <path fill="currentColor" d="M17 14a1 1 0 1 0 0-2a1 1 0 0 0 0 2m0 4a1 1 0 1 0 0-2a1 1 0 0 0 0 2m-4-5a1 1 0 1 1-2 0a1 1 0 0 1 2 0m0 4a1 1 0 1 1-2 0a1 1 0 0 1 2 0m-6-3a1 1 0 1 0 0-2a1 1 0 0 0 0 2m0 4a1 1 0 1 0 0-2a1 1 0 0 0 0 2"/><path fill="currentColor" fill-rule="evenodd" d="M7 1.75a.75.75 0 0 1 .75.75v.763c.662-.013 1.391-.013 2.193-.013h4.113c.803 0 1.532 0 2.194.013V2.5a.75.75 0 0 1 1.5 0v.827c.26.02.506.045.739.076c1.172.158 2.121.49 2.87 1.238c.748.749 1.08 1.698 1.238 2.87c.153 1.14.153 2.595.153 4.433v2.112c0 1.838 0 3.294-.153 4.433c-.158 1.172-.49 2.121-1.238 2.87c-.749.748-1.698 1.08-2.87 1.238c-1.14.153-2.595.153-4.433.153H9.945c-1.838 0-3.294 0-4.433-.153c-1.172-.158-2.121-.49-2.87-1.238c-.748-.749-1.08-1.698-1.238-2.87c-.153-1.14-.153-2.595-.153-4.433v-2.112c0-1.838 0-3.294.153-4.433c.158-1.172.49-2.121 1.238-2.87c.749-.748 1.698-1.08 2.87-1.238c.233-.031.48-.056.739-.076V2.5A.75.75 0 0 1 7 1.75M5.71 4.89c-1.005.135-1.585.389-2.008.812c-.423.423-.677 1.003-.812 2.009c-.023.17-.042.35-.058.539h18.336c-.016-.19-.035-.369-.058-.54c-.135-1.005-.389-1.585-.812-2.008c-.423-.423-1.003-.677-2.009-.812c-1.027-.138-2.382-.14-4.289-.14h-4c-1.907 0-3.261.002-4.29.14M2.75 12c0-.854 0-1.597.013-2.25h18.474c.013.653.013 1.396.013 2.25v2c0 1.907-.002 3.262-.14 4.29c-.135 1.005-.389 1.585-.812 2.008c-.423.423-1.003.677-2.009.812c-1.027.138-2.382.14-4.289.14h-4c-1.907 0-3.261-.002-4.29-.14c-1.005-.135-1.585-.389-2.008-.812c-.423-.423-.677-1.003-.812-2.009c-.138-1.027-.14-2.382-.14-4.289z" clip-rule="evenodd"/>
-    </symbol>
-    <symbol xmlns="http://www.w3.org/2000/svg" id="point-on-map-outline" viewBox="0 0 24 24">
-      <path fill="currentColor" fill-rule="evenodd" d="M5.25 7.7c0-3.598 3.059-6.45 6.75-6.45c3.608 0 6.612 2.725 6.745 6.208l.478.16c.463.153.87.289 1.191.439c.348.162.667.37.911.709c.244.338.341.707.385 1.088c.04.353.04.78.04 1.269v5.748c0 .61 0 1.13-.047 1.547c-.05.438-.161.87-.463 1.237a2.25 2.25 0 0 1-.62.525c-.412.237-.855.276-1.296.253c-.42-.022-.933-.107-1.534-.208l-.041-.007c-1.293-.215-1.814-.296-2.322-.254a4.3 4.3 0 0 0-.552.083c-.498.109-.976.342-2.159.933l-.122.061c-1.383.692-2.234 1.118-3.154 1.251c-.276.04-.555.06-.835.06c-.928-.002-1.825-.301-3.28-.786a73.75 73.75 0 0 1-.127-.043l-.384-.128l-.037-.012c-.463-.154-.87-.29-1.191-.44c-.348-.162-.667-.37-.911-.709c-.244-.338-.341-.707-.385-1.088c-.04-.353-.04-.78-.04-1.269v-5.02c0-.786 0-1.448.067-1.967c.07-.542.23-1.072.666-1.47a2.25 2.25 0 0 1 .42-.304c.517-.287 1.07-.27 1.605-.166c.11.021.223.047.342.078c-.066-.446-.1-.89-.1-1.328m.499 3.01a9.414 9.414 0 0 0-1.028-.288c-.395-.077-.525-.03-.586.004a.747.747 0 0 0-.14.101c-.053.048-.138.156-.19.556c-.053.41-.055.974-.055 1.825v4.93c0 .539.001.88.03 1.138c.028.238.072.327.112.381c.039.055.109.125.326.226c.236.11.56.219 1.07.39l.384.127c1.624.541 2.279.75 2.936.752c.207 0 .413-.015.617-.044c.65-.094 1.276-.397 2.82-1.17l.093-.046c1.06-.53 1.714-.857 2.417-1.01c.246-.054.496-.092.747-.113c.717-.06 1.432.06 2.593.253l.1.017c.655.109 1.083.18 1.407.196c.312.016.419-.025.471-.055a.749.749 0 0 0 .207-.175c.039-.047.097-.146.132-.456c.037-.323.038-.757.038-1.42v-5.667c0-.539-.001-.88-.03-1.138c-.028-.238-.072-.327-.112-.381c-.039-.055-.109-.125-.326-.226c-.236-.11-.56-.219-1.07-.39l-.06-.019a10.701 10.701 0 0 1-1.335 3.788c-.912 1.568-2.247 2.934-3.92 3.663a3.505 3.505 0 0 1-2.794 0c-1.673-.73-3.008-2.095-3.92-3.663a10.856 10.856 0 0 1-.934-2.087M12 2.75c-2.936 0-5.25 2.252-5.25 4.95c0 1.418.437 2.98 1.23 4.341c.791 1.362 1.908 2.47 3.223 3.044c.505.22 1.089.22 1.594 0c1.316-.574 2.432-1.682 3.224-3.044c.792-1.36 1.229-2.923 1.229-4.34c0-2.699-2.314-4.951-5.25-4.951m0 4a1.25 1.25 0 1 0 0 2.5a1.25 1.25 0 0 0 0-2.5M9.25 8a2.75 2.75 0 1 1 5.5 0a2.75 2.75 0 0 1-5.5 0" clip-rule="evenodd"/>
-    </symbol>
-    <symbol xmlns="http://www.w3.org/2000/svg" id="pen-new-round-outline" viewBox="0 0 24 24">
-      <path fill="currentColor" fill-rule="evenodd" d="M1.25 12C1.25 6.063 6.063 1.25 12 1.25a.75.75 0 0 1 0 1.5A9.25 9.25 0 1 0 21.25 12a.75.75 0 0 1 1.5 0c0 5.937-4.813 10.75-10.75 10.75S1.25 17.937 1.25 12m15.52-9.724a3.503 3.503 0 0 1 4.954 4.953l-6.648 6.649c-.371.37-.604.604-.863.806a5.34 5.34 0 0 1-.987.61c-.297.141-.61.245-1.107.411l-2.905.968a1.492 1.492 0 0 1-1.887-1.887l.968-2.905c.166-.498.27-.81.411-1.107c.167-.35.372-.68.61-.987c.202-.26.435-.492.806-.863zm3.893 1.06a2.003 2.003 0 0 0-2.832 0l-.376.377c.022.096.054.21.098.338c.143.413.415.957.927 1.469a3.875 3.875 0 0 0 1.807 1.025l.376-.376a2.003 2.003 0 0 0 0-2.832m-1.558 4.391a5.397 5.397 0 0 1-1.686-1.146a5.395 5.395 0 0 1-1.146-1.686L11.218 9.95c-.417.417-.58.582-.72.76a3.84 3.84 0 0 0-.437.71c-.098.203-.172.423-.359.982l-.431 1.295l1.032 1.033l1.295-.432c.56-.187.779-.261.983-.358c.251-.12.49-.267.71-.439c.177-.139.342-.302.759-.718z" clip-rule="evenodd"/>
-    </symbol>
-    <symbol xmlns="http://www.w3.org/2000/svg" id="facebook" viewBox="0 0 24 24">
-      <path fill="currentColor"
-        d="M22 12c0-5.52-4.48-10-10-10S2 6.48 2 12c0 4.84 3.44 8.87 8 9.8V15H8v-3h2V9.5C10 7.57 11.57 6 13.5 6H16v3h-2c-.55 0-1 .45-1 1v2h3v3h-3v6.95c5.05-.5 9-4.76 9-9.95z" />
-    </symbol>
-    <symbol xmlns="http://www.w3.org/2000/svg" id="youtube" viewBox="0 0 32 32">
-      <path fill="currentColor"
-        d="M29.41 9.26a3.5 3.5 0 0 0-2.47-2.47C24.76 6.2 16 6.2 16 6.2s-8.76 0-10.94.59a3.5 3.5 0 0 0-2.47 2.47A36.13 36.13 0 0 0 2 16a36.13 36.13 0 0 0 .59 6.74a3.5 3.5 0 0 0 2.47 2.47c2.18.59 10.94.59 10.94.59s8.76 0 10.94-.59a3.5 3.5 0 0 0 2.47-2.47A36.13 36.13 0 0 0 30 16a36.13 36.13 0 0 0-.59-6.74ZM13.2 20.2v-8.4l7.27 4.2Z" />
-    </symbol>
-    <symbol xmlns="http://www.w3.org/2000/svg" id="instagram" viewBox="0 0 256 256">
-      <path fill="currentColor"
-        d="M128 80a48 48 0 1 0 48 48a48.05 48.05 0 0 0-48-48Zm0 80a32 32 0 1 1 32-32a32 32 0 0 1-32 32Zm48-136H80a56.06 56.06 0 0 0-56 56v96a56.06 56.06 0 0 0 56 56h96a56.06 56.06 0 0 0 56-56V80a56.06 56.06 0 0 0-56-56Zm40 152a40 40 0 0 1-40 40H80a40 40 0 0 1-40-40V80a40 40 0 0 1 40-40h96a40 40 0 0 1 40 40ZM192 76a12 12 0 1 1-12-12a12 12 0 0 1 12 12Z" />
-    </symbol>
-    <symbol xmlns="http://www.w3.org/2000/svg" id="twitter" viewBox="0 0 24 24">
-      <path fill="currentColor"
-        d="M22.46 6c-.77.35-1.6.58-2.46.69c.88-.53 1.56-1.37 1.88-2.38c-.83.5-1.75.85-2.72 1.05C18.37 4.5 17.26 4 16 4c-2.35 0-4.27 1.92-4.27 4.29c0 .34.04.67.11.98C8.28 9.09 5.11 7.38 3 4.79c-.37.63-.58 1.37-.58 2.15c0 1.49.75 2.81 1.91 3.56c-.71 0-1.37-.2-1.95-.5v.03c0 2.08 1.48 3.82 3.44 4.21a4.22 4.22 0 0 1-1.93.07a4.28 4.28 0 0 0 4 2.98a8.521 8.521 0 0 1-5.33 1.84c-.34 0-.68-.02-1.02-.06C3.44 20.29 5.7 21 8.12 21C16 21 20.33 14.46 20.33 8.79c0-.19 0-.37-.01-.56c.84-.6 1.56-1.36 2.14-2.23Z" />
-    </symbol>
-    <symbol xmlns="http://www.w3.org/2000/svg" id="linkedin" viewBox="0 0 512 512">
-      <path fill="currentColor"
-        d="M444.17 32H70.28C49.85 32 32 46.7 32 66.89v374.72C32 461.91 49.85 480 70.28 480h373.78c20.54 0 35.94-18.21 35.94-38.39V66.89C480.12 46.7 464.6 32 444.17 32Zm-273.3 373.43h-64.18V205.88h64.18ZM141 175.54h-.46c-20.54 0-33.84-15.29-33.84-34.43c0-19.49 13.65-34.42 34.65-34.42s33.85 14.82 34.31 34.42c-.01 19.14-13.31 34.43-34.66 34.43Zm264.43 229.89h-64.18V296.32c0-26.14-9.34-44-32.56-44c-17.74 0-28.24 12-32.91 23.69c-1.75 4.2-2.22 9.92-2.22 15.76v113.66h-64.18V205.88h64.18v27.77c9.34-13.3 23.93-32.44 57.88-32.44c42.13 0 74 27.77 74 87.64Z" />
-    </symbol>
-    <symbol xmlns="http://www.w3.org/2000/svg" id="search" viewBox="0 0 512 512">
-      <path fill="currentColor" d="M456.69 421.39L362.6 327.3a173.81 173.81 0 0 0 34.84-104.58C397.44 126.38 319.06 48 222.72 48S48 126.38 48 222.72s78.38 174.72 174.72 174.72A173.81 173.81 0 0 0 327.3 362.6l94.09 94.09a25 25 0 0 0 35.3-35.3M97.92 222.72a124.8 124.8 0 1 1 124.8 124.8a124.95 124.95 0 0 1-124.8-124.8"/>
-    </symbol>
-    <symbol xmlns="http://www.w3.org/2000/svg" id="arrow-down" viewBox="0 0 16 16">
-      <path fill-rule="evenodd"
-        d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z" />
-    </symbol>
-    <symbol xmlns="http://www.w3.org/2000/svg" id="plus" viewBox="0 0 16 16">
-      <path d="M8 4a.5.5 0 0 1 .5.5v3h3a.5.5 0 0 1 0 1h-3v3a.5.5 0 0 1-1 0v-3h-3a.5.5 0 0 1 0-1h3v-3A.5.5 0 0 1 8 4z" />
-    </symbol>
-    <symbol xmlns="http://www.w3.org/2000/svg" id="minus" viewBox="0 0 16 16">
-      <path d="M4 8a.5.5 0 0 1 .5-.5h7a.5.5 0 0 1 0 1h-7A.5.5 0 0 1 4 8z" />
-    </symbol>
-  </svg>
-
-  <header id="header" class="sticky top-0 z-50 bg-white/90 backdrop-blur border-b border-gray-200">
-    <nav class="bg-gray-100/80 py-2">
-      <div class="container mx-auto px-4">
-        <div class="flex flex-wrap justify-between items-center gap-3">
-          <ul class="flex flex-wrap gap-4 list-none m-0 p-0 text-xs md:text-sm">
-            <li class="flex items-center capitalize">
-              <svg class="text-accent mr-1" width="18" height="18">
-                <use xlink:href="#location"></use>
-              </svg>гр. Павликени и Великотърновска област
-            </li>
-            <li class="flex items-center capitalize">
-              <svg class="text-accent mr-1" width="18" height="18">
-                <use xlink:href="#phone"></use>
-              </svg>тел: 0887 079 976
-            </li>
-            <li class="flex items-center capitalize">
-              <svg class="text-accent mr-1" width="18" height="18">
-                <use xlink:href="#clock"></use>
-              </svg>Бърза реакция - често още същия ден
-            </li>
-          </ul>
-          <div>
-            <a href="#quote" class="px-4 py-1.5 text-xs uppercase border-2 border-dark text-dark hover:bg-dark hover:text-white transition-all duration-300 rounded-full">Безплатна оферта</a>
-          </div>
-        </div>
-      </div>
-    </nav>
-
-    <nav class="py-4 bg-white/80">
-      <div class="container mx-auto px-4">
-        <div class="flex items-center justify-between">
-          <a class="flex items-center" href="index.html">
-            <h3 class="mb-0 font-bold text-xl tracking-wide bg-gradient-to-r from-primary to-accent bg-clip-text text-transparent">STEFAN-PAVLIKENI</h3>
-          </a>
-          <button class="lg:hidden p-2 border-0 rounded focus:outline-none focus:ring-2 focus:ring-accent" type="button" data-bs-toggle="offcanvas" data-bs-target="#bdNavbar" aria-controls="bdNavbar" aria-expanded="false" aria-label="Open menu">
-            <svg class="text-dark" width="30" height="30">
-              <use xlink:href="#navbar-icon"></use>
+        <div class="hidden items-center gap-3 md:flex">
+          <a
+            href="tel:+359887079976"
+            class="inline-flex items-center gap-2 rounded-full bg-brandGreen px-5 py-2 text-sm font-semibold text-white shadow-soft transition hover:bg-green-600 hover:shadow-md"
+          >
+            <svg class="h-4 w-4 text-white" viewBox="0 0 24 24" fill="none" stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5.5A2.5 2.5 0 015.5 3h2A2.5 2.5 0 0110 5.5v1A2.5 2.5 0 017.5 9H7a9.5 9.5 0 008 8v-.5A2.5 2.5 0 0117.5 14h1a2.5 2.5 0 012.5 2.5v2A2.5 2.5 0 0118.5 21h-1C9.82 21 3 14.18 3 5.5z" />
             </svg>
-          </button>
-          <div class="hidden lg:flex items-center">
-            <ul class="flex items-center gap-8 list-none m-0 p-0">
-              <li>
-                <a class="uppercase text-dark hover:text-primary transition-colors duration-300 text-sm tracking-wide relative after:content-[''] after:absolute after:left-0 after:-bottom-1 after:h-0.5 after:w-0 after:bg-primary after:transition-all after:duration-300 hover:after:w-full" aria-current="page" href="index.html">Начало</a>
-              </li>
-              <li>
-                <a class="uppercase text-dark hover:text-primary transition-colors duration-300 text-sm tracking-wide relative after:content-[''] after:absolute after:left-0 after:-bottom-1 after:h-0.5 after:w-0 after:bg-primary after:transition-all after:duration-300 hover:after:w-full" href="#about-us">За нас</a>
-              </li>
-              <li>
-                <a class="uppercase text-dark hover:text-primary transition-colors duration-300 text-sm tracking-wide relative after:content-[''] after:absolute after:left-0 after:-bottom-1 after:h-0.5 after:w-0 after:bg-primary after:transition-all after:duration-300 hover:after:w-full" href="#our-services">Услуги</a>
-              </li>
-              <li>
-                <a class="uppercase text-dark hover:text-primary transition-colors duration-300 text-sm tracking-wide relative after:content-[''] after:absolute after:left-0 after:-bottom-1 after:h-0.5 after:w-0 after:bg-primary after:transition-all after:duration-300 hover:after:w-full" href="#quote">Контакт</a>
-              </li>
-              <li class="ml-8 relative">
-                <a class="p-0 search dropdown-toggle cursor-pointer" data-bs-toggle="dropdown" href="#" role="button" aria-expanded="false">
-                  <svg class="text-dark" width="24" height="24">
-                    <use xlink:href="#search"></use>
-                  </svg>
-                </a>
-                <ul class="dropdown-menu dropdown-menu-end absolute right-0 mt-3 bg-white border-0 rounded-lg shadow-lg p-3 w-64">
-                  <li class="relative flex items-center p-0">
-                    <input class="w-full px-3 py-2 border border-gray-300 rounded focus:outline-none focus:ring-2 focus:ring-accent pr-10" type="search" placeholder="Search" aria-label="Search">
-                    <button class="absolute right-2 p-1 text-accent hover:text-primary" type="submit">
-                      <svg width="20" height="20">
-                        <use xlink:href="#search"></use>
-                      </svg>
-                    </button>
-                  </li>
-                </ul>
-              </li>
-              <li class="ml-4">
-                <a href="#quote" class="inline-flex items-center px-6 py-2 bg-gradient-to-r from-primary to-[#FF9F40] text-white uppercase text-xs font-semibold rounded-full shadow-lg hover:shadow-xl hover:-translate-y-0.5 transition-all duration-300 hover:from-accent hover:to-[#1BB8F5]">Свържи се</a>
-              </li>
-            </ul>
-          </div>
+            Обади се
+          </a>
         </div>
-      </div>
-    </nav>
 
-    <!-- Mobile Menu Offcanvas -->
-    <div class="offcanvas offcanvas-end fixed bottom-0 flex flex-col max-w-full bg-white invisible bg-clip-padding shadow-sm outline-none transition duration-300 ease-in-out transform translate-x-full top-0 right-0 border-none w-80 sm:w-96" id="bdNavbar" aria-labelledby="bdNavbarOffcanvasLabel">
-      <div class="offcanvas-header px-4 pb-0 flex items-center justify-between p-4 border-b">
-        <h5 class="offcanvas-title font-semibold" id="bdNavbarOffcanvasLabel">Меню</h5>
-        <button type="button" class="btn-close text-reset opacity-50 hover:opacity-100" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+        <button
+          type="button"
+          class="inline-flex items-center justify-center rounded-full border border-slate-200 p-2 text-slate-700 md:hidden"
+          aria-label="Отвори меню"
+          aria-controls="mobile-menu"
+          aria-expanded="false"
+          id="mobile-menu-button"
+        >
+          <svg class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
+          </svg>
+        </button>
       </div>
-      <div class="offcanvas-body flex-grow p-4 overflow-y-auto">
-        <ul class="flex flex-col gap-4 list-none m-0 p-0">
-          <li>
-            <a class="block uppercase text-dark hover:text-primary transition-colors duration-300 text-base py-2" aria-current="page" href="index.html">Начало</a>
-          </li>
-          <li>
-            <a class="block uppercase text-dark hover:text-primary transition-colors duration-300 text-base py-2" href="#about-us">За нас</a>
-          </li>
-          <li>
-            <a class="block uppercase text-dark hover:text-primary transition-colors duration-300 text-base py-2" href="#our-services">Услуги</a>
-          </li>
-          <li>
-            <a class="block uppercase text-dark hover:text-primary transition-colors duration-300 text-base py-2" href="#quote">Контакт</a>
-          </li>
-        </ul>
-        <div class="mt-6">
-          <a href="#quote" class="inline-flex w-full items-center justify-center px-6 py-3 bg-gradient-to-r from-primary to-[#FF9F40] text-white uppercase text-xs font-semibold rounded-full shadow-lg hover:shadow-xl transition-all duration-300 hover:from-accent hover:to-[#1BB8F5]">Заявка за оферта</a>
-        </div>
-      </div>
-    </div>
-  </header>
 
-  <section id="slider" class="relative">
-    <div class="swiper slider relative">
-      <div class="swiper-wrapper">
-        <div class="swiper-slide flex items-center justify-center bg-cover bg-center bg-no-repeat h-[80vh]" style="background-image: url(images/slider-image.jpg);">
-          <div class="bg-white/95 backdrop-blur-sm px-8 py-6 text-center mx-auto rounded-2xl shadow-2xl max-w-2xl hover:shadow-3xl transition-all duration-300 hover:-translate-y-1">
-            <h2 class="mb-0 text-3xl md:text-4xl font-bold text-black mb-4">Бързи и надеждни услуги</h2>
-            <p class="text-lg md:text-xl capitalize text-dark mb-6">Косене, почистване и транспорт в гр. Павликени и Великотърновска област</p>
-            <a href="#our-services" class="inline-block px-8 py-3.5 bg-gradient-to-r from-primary to-[#FF9F40] text-white uppercase font-semibold rounded-full shadow-lg hover:shadow-xl hover:-translate-y-0.5 transition-all duration-300 hover:from-accent hover:to-[#1BB8F5]">Нашите услуги</a>
-          </div>
-        </div>
-        <div class="swiper-slide flex items-center justify-center bg-cover bg-center bg-no-repeat h-[80vh]" style="background-image: url(images/slider-image1.jpg);">
-          <div class="bg-white/95 backdrop-blur-sm px-8 py-6 text-center mx-auto rounded-2xl shadow-2xl max-w-2xl hover:shadow-3xl transition-all duration-300 hover:-translate-y-1">
-            <h2 class="mb-0 text-3xl md:text-4xl font-bold text-black mb-4">Качествено косене и почистване</h2>
-            <p class="text-lg md:text-xl capitalize text-dark mb-6">Търсите качествено косене, почистване или извозване? Ние сме правилният избор!</p>
-            <a href="#quote" class="inline-block px-8 py-3.5 bg-gradient-to-r from-primary to-[#FF9F40] text-white uppercase font-semibold rounded-full shadow-lg hover:shadow-xl hover:-translate-y-0.5 transition-all duration-300 hover:from-accent hover:to-[#1BB8F5]">Безплатна оферта</a>
-          </div>
-        </div>
+      <!-- Mobile Menu -->
+      <div class="hidden border-t border-slate-100 bg-white md:hidden" id="mobile-menu">
+        <nav class="flex flex-col gap-4 px-4 py-5 text-sm font-medium text-slate-700" aria-label="Мобилна навигация">
+          <a href="#services" class="hover:text-slate-900">Услуги</a>
+          <a href="#gallery" class="hover:text-slate-900">Галерия</a>
+          <a href="#area" class="hover:text-slate-900">Район</a>
+          <a href="#reviews" class="hover:text-slate-900">Процес</a>
+          <a href="#faq" class="hover:text-slate-900">ЧЗВ</a>
+          <a href="#contact" class="hover:text-slate-900">Контакти</a>
+          <a
+            href="tel:+359887079976"
+            class="mt-2 rounded-full bg-brandGreen px-5 py-2 text-center text-sm font-semibold text-white shadow-soft"
+          >
+            Обади се
+          </a>
+        </nav>
       </div>
-      <div class="absolute top-1/2 -translate-y-1/2 right-0 md:right-5 z-10 cursor-pointer opacity-90 hover:opacity-100 hover:scale-110 transition-all duration-300 main-slider-button-next">
-        <svg class="text-white" width="60" height="60">
-          <use xlink:href="#chevron-forward-circle"></use>
-        </svg>
-      </div>
-      <div class="absolute top-1/2 -translate-y-1/2 left-0 md:left-5 z-10 cursor-pointer opacity-90 hover:opacity-100 hover:scale-110 transition-all duration-300 main-slider-button-prev">
-        <svg class="text-white" width="60" height="60">
-          <use xlink:href="#chevron-back-circle"></use>
-        </svg>
-      </div>
-    </div>
-  </section>
+    </header>
 
-  <section id="about-us" class="relative bg-gray-100 py-20 md:py-32">
-    <div class="container mx-auto px-4">
-      <div class="grid grid-cols-1 lg:grid-cols-12 gap-10 items-center">
-        <div class="lg:col-span-6">
-          <div class="relative rounded-2xl overflow-hidden shadow-xl bg-white">
-            <a type="button" data-bs-toggle="modal" data-src="https://www.youtube.com/embed/W_tIumKa8VY" data-bs-target="#myModal" class="block relative group">
-              <img class="w-full h-auto transition-transform duration-300 group-hover:scale-105" src="images/about.png" alt="Екип и оборудване">
-              <div class="absolute inset-0 bg-gradient-to-tr from-black/10 to-accent/10 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
-              <div class="absolute bottom-4 left-4 bg-white/90 backdrop-blur px-4 py-2 rounded-full text-xs uppercase tracking-wide text-dark shadow">Гледай видео</div>
+    <main>
+      <!-- Hero Section -->
+      <section class="relative overflow-hidden">
+        <div class="absolute inset-0">
+          <div class="absolute -top-24 right-0 h-72 w-72 rounded-full bg-green-100 blur-3xl"></div>
+          <div class="absolute bottom-0 left-0 h-80 w-80 rounded-full bg-blue-100 blur-3xl"></div>
+        </div>
+
+        <div class="relative mx-auto flex max-w-4xl flex-col items-center justify-center gap-7 px-4 py-10 text-center sm:px-6 md:py-12 lg:px-8">
+          <div class="inline-flex items-center gap-2 rounded-full border border-slate-200 bg-white px-3 py-1 text-xs font-semibold text-slate-600 shadow-soft">
+            <span class="h-2 w-2 rounded-full bg-brandGreen"></span>
+            Локални услуги за Павликени и областта
+          </div>
+
+          <h1 class="text-3xl font-semibold leading-tight text-slate-900 sm:text-4xl lg:text-5xl">
+            Косене, почистване и извозване в Павликени и Великотърновска област
+          </h1>
+          <p class="text-base leading-relaxed text-slate-600 sm:text-lg">
+            Бърза реакция, коректни цени и професионално оборудване. Работим с частни лица и фирми.
+          </p>
+
+          <div class="flex flex-col gap-3 sm:flex-row sm:items-center">
+            <a
+              href="tel:+359887079976"
+              class="rounded-full bg-brandGreen px-6 py-3 text-center text-base font-semibold text-white shadow-soft transition hover:bg-green-600 hover:shadow-md"
+            >
+              Обади се: 0887 079 976
+            </a>
+            <a
+              href="#contact"
+              class="rounded-full border border-slate-200 px-7 py-3 text-center text-base font-semibold text-slate-800 transition hover:border-slate-300 hover:shadow-soft"
+            >
+              Безплатна оферта
             </a>
           </div>
-          <div class="grid grid-cols-3 gap-3 mt-4 text-center">
-            <div class="bg-white rounded-xl p-4 shadow-sm border border-gray-200">
-              <p class="text-2xl font-bold text-black">24ч</p>
-              <p class="text-xs uppercase text-dark">Бърза реакция</p>
-            </div>
-            <div class="bg-white rounded-xl p-4 shadow-sm border border-gray-200">
-              <p class="text-2xl font-bold text-black">100%</p>
-              <p class="text-xs uppercase text-dark">Коректност</p>
-            </div>
-            <div class="bg-white rounded-xl p-4 shadow-sm border border-gray-200">
-              <p class="text-2xl font-bold text-black">5+</p>
-              <p class="text-xs uppercase text-dark">Услуги</p>
-            </div>
-          </div>
-        </div>
 
-        <div class="lg:col-span-6">
-          <p class="text-primary text-lg uppercase tracking-wide mb-2">За нас</p>
-          <h3 class="text-3xl md:text-4xl font-bold text-black mb-4">Бързи и надеждни услуги</h3>
-          <p class="text-dark leading-relaxed mb-5">Осигуряваме професионално косене, почистване, извозване и транспорт в гр. Павликени и цялата Великотърновска област. Работим както с частни лица, така и с фирми, с фокус върху качество и точност.</p>
-          <ul class="space-y-3 mb-6">
-            <li class="flex items-start gap-3">
-              <span class="mt-1 inline-flex h-5 w-5 items-center justify-center rounded-full bg-accent/10 text-accent">
-                ✓
-              </span>
-              <p class="text-dark">Модерна техника и безопасни практики за работа.</p>
-            </li>
-            <li class="flex items-start gap-3">
-              <span class="mt-1 inline-flex h-5 w-5 items-center justify-center rounded-full bg-accent/10 text-accent">
-                ✓
-              </span>
-              <p class="text-dark">Чисто предаване на обекта без излишни ангажименти.</p>
-            </li>
-            <li class="flex items-start gap-3">
-              <span class="mt-1 inline-flex h-5 w-5 items-center justify-center rounded-full bg-accent/10 text-accent">
-                ✓
-              </span>
-              <p class="text-dark">Прозрачни цени и бърза организация на услугата.</p>
-            </li>
-          </ul>
-          <div class="flex flex-wrap gap-4">
-            <a class="inline-block px-8 py-3.5 bg-gradient-to-r from-primary to-[#FF9F40] text-white uppercase font-semibold rounded-full shadow-lg hover:shadow-xl hover:-translate-y-0.5 transition-all duration-300 hover:from-accent hover:to-[#1BB8F5]" href="#our-services">Нашите услуги</a>
-            <a class="inline-flex items-center px-6 py-3 border-2 border-dark text-dark uppercase text-xs font-semibold rounded-full hover:bg-dark hover:text-white transition-all duration-300" href="tel:0887079976">Обади се</a>
+          <div class="flex flex-wrap items-center justify-center gap-2">
+            <span class="rounded-full border border-slate-200 bg-white px-3 py-1 text-xs font-semibold text-slate-700 sm:text-sm">
+              Още същия ден
+            </span>
+            <span class="rounded-full border border-slate-200 bg-white px-3 py-1 text-xs font-semibold text-slate-700 sm:text-sm">
+              Без скрити такси
+            </span>
+            <span class="rounded-full border border-slate-200 bg-white px-3 py-1 text-xs font-semibold text-slate-700 sm:text-sm">
+              Само регламентирани депа
+            </span>
           </div>
-        </div>
-      </div>
-    </div>
-    <img class="pb-5 absolute hidden 2xl:block right-0 bottom-0 w-auto" src="images/bg-pattern-img.png" alt="img">
-  </section>
 
-  <section id="our-services" class="py-20 md:py-32 bg-cover bg-center bg-no-repeat" style="background-image: url(images/services-bg.png);">
-    <div class="swiper services-swiper py-3">
-      <div class="swiper-wrapper">
-        <div class="swiper-slide mt-5">
-          <div class="text-center p-5 rounded-2xl transition-all duration-300 hover:-translate-y-2 hover:bg-white/80 hover:shadow-xl">
-            <img class="rounded-full mb-4 w-full max-w-[200px] mx-auto shadow-[0_0_0_8px_#E3F2F9] hover:shadow-[0_0_0_14px_#E3F2F9,0_4px_12px_rgba(0,0,0,0.1)] transition-all duration-300 hover:scale-105" src="images/service1.jpg" alt="Косене и поддръжка на тревни площи">
-            <h6 class="mb-2 text-lg font-semibold text-black hover:text-primary transition-colors duration-300">🌿 Косене и поддръжка</h6>
-            <p class="text-dark">Професионално косене на дворове, парцели и зелени площи. Еднократно или абонаментно.</p>
+          <div class="flex flex-wrap items-center justify-center gap-2 text-xs font-semibold uppercase tracking-wider text-slate-600">
+            <a href="#service-kosene" class="rounded-full bg-slate-100 px-3 py-1 transition hover:bg-slate-200">Косене</a>
+            <a href="#service-pochistvane" class="rounded-full bg-slate-100 px-3 py-1 transition hover:bg-slate-200">Почистване</a>
+            <a href="#service-darveta" class="rounded-full bg-slate-100 px-3 py-1 transition hover:bg-slate-200">Дървета</a>
+            <a href="#service-samosval" class="rounded-full bg-slate-100 px-3 py-1 transition hover:bg-slate-200">Самосвал</a>
+            <a href="#service-bus" class="rounded-full bg-slate-100 px-3 py-1 transition hover:bg-slate-200">Бус</a>
+            <a href="#service-izvozvane" class="rounded-full bg-slate-100 px-3 py-1 transition hover:bg-slate-200">Извозване</a>
           </div>
         </div>
-        <div class="swiper-slide">
-          <div class="text-center p-5 rounded-2xl transition-all duration-300 hover:-translate-y-2 hover:bg-white/80 hover:shadow-xl">
-            <img class="rounded-full mb-4 w-full max-w-[200px] mx-auto shadow-[0_0_0_8px_#E3F2F9] hover:shadow-[0_0_0_14px_#E3F2F9,0_4px_12px_rgba(0,0,0,0.1)] transition-all duration-300 hover:scale-105" src="images/service2.jpg" alt="Почистване на дворове, къщи и апартаменти">
-            <h6 class="mb-2 text-lg font-semibold text-black hover:text-primary transition-colors duration-300">🧹 Почистване</h6>
-            <p class="text-dark">Пълно почистване след ремонт, разчистване на запустели имоти и изнасяне на отпадъци.</p>
-          </div>
-        </div>
-        <div class="swiper-slide mt-5 pt-5">
-          <div class="text-center p-5 rounded-2xl transition-all duration-300 hover:-translate-y-2 hover:bg-white/80 hover:shadow-xl">
-            <img class="rounded-full mb-4 w-full max-w-[200px] mx-auto shadow-[0_0_0_8px_#E3F2F9] hover:shadow-[0_0_0_14px_#E3F2F9,0_4px_12px_rgba(0,0,0,0.1)] transition-all duration-300 hover:scale-105" src="images/service3.jpg" alt="Рязане и събаряне на дървета">
-            <h6 class="mb-2 text-lg font-semibold text-black hover:text-primary transition-colors duration-300">🌳 Рязане на дървета</h6>
-            <p class="text-dark">Безопасно рязане и събаряне на опасни или ненужни дървета, включително в труднодостъпни места.</p>
-          </div>
-        </div>
-        <div class="swiper-slide mt-5 pt-1">
-          <div class="text-center p-5 rounded-2xl transition-all duration-300 hover:-translate-y-2 hover:bg-white/80 hover:shadow-xl">
-            <img class="rounded-full mb-4 w-full max-w-[200px] mx-auto shadow-[0_0_0_8px_#E3F2F9] hover:shadow-[0_0_0_14px_#E3F2F9,0_4px_12px_rgba(0,0,0,0.1)] transition-all duration-300 hover:scale-105" src="images/service4.jpg" alt="Услуги с бус">
-            <h6 class="mb-2 text-lg font-semibold text-black hover:text-primary transition-colors duration-300">🚐 Услуги с бус</h6>
-            <p class="text-dark">Превоз на мебели, техника, строителни материали и други товари. Подходящо за преместване.</p>
-          </div>
-        </div>
-        <div class="swiper-slide mt-3">
-          <div class="text-center p-5 rounded-2xl transition-all duration-300 hover:-translate-y-2 hover:bg-white/80 hover:shadow-xl">
-            <img class="rounded-full mb-4 w-full max-w-[200px] mx-auto shadow-[0_0_0_8px_#E3F2F9] hover:shadow-[0_0_0_14px_#E3F2F9,0_4px_12px_rgba(0,0,0,0.1)] transition-all duration-300 hover:scale-105" src="images/service5.jpg" alt="Услуги със самосвал">
-            <h6 class="mb-2 text-lg font-semibold text-black hover:text-primary transition-colors duration-300">🚚 Услуги със самосвал</h6>
-            <p class="text-dark">Извозване на строителни отпадъци, земна маса, клони и насипни материали – бързо и отговорно.</p>
-          </div>
-        </div>
-        <div class="swiper-slide mt-3">
-          <div class="text-center p-5 rounded-2xl transition-all duration-300 hover:-translate-y-2 hover:bg-white/80 hover:shadow-xl">
-            <img class="rounded-full mb-4 w-full max-w-[200px] mx-auto shadow-[0_0_0_8px_#E3F2F9] hover:shadow-[0_0_0_14px_#E3F2F9,0_4px_12px_rgba(0,0,0,0.1)] transition-all duration-300 hover:scale-105" src="images/service1.jpg" alt="Извозване на отпадъци">
-            <h6 class="mb-2 text-lg font-semibold text-black hover:text-primary transition-colors duration-300">♻️ Извозване на отпадъци</h6>
-            <p class="text-dark">Извозване на строителни и битови отпадъци само до регламентирани депа.</p>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
+      </section>
 
-  <section id="features" class="py-20 md:py-32">
-    <div class="container mx-auto px-4">
-      <div class="mb-12 text-center">
-        <p class="mb-2 text-lg text-primary capitalize">Защо да изберете нас?</p>
-        <h3 class="text-3xl md:text-4xl font-bold text-black relative inline-block pb-4 after:content-[''] after:absolute after:bottom-0 after:left-1/2 after:-translate-x-1/2 after:w-16 after:h-1 after:bg-gradient-to-r after:from-primary after:to-accent after:rounded">Нашите предимства</h3>
-      </div>
-      <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
-        <div class="bg-white text-center px-4 py-6 border border-gray-200 rounded-xl transition-all duration-300 hover:-translate-y-1.5 hover:shadow-xl hover:border-accent">
-          <svg class="text-accent my-3 mx-auto transition-transform duration-300 hover:scale-110" width="32" height="32">
-            <use xlink:href="#clock"></use>
-          </svg>
-          <h6 class="mb-2 text-lg font-semibold text-black">Бърза реакция</h6>
-          <p class="text-dark text-sm">Често още същия ден. Вие се обаждате – ние се грижим за всичко.</p>
-        </div>
-        <div class="bg-white text-center px-4 py-6 border border-gray-200 rounded-xl transition-all duration-300 hover:-translate-y-1.5 hover:shadow-xl hover:border-accent">
-          <svg class="text-accent my-3 mx-auto transition-transform duration-300 hover:scale-110" width="32" height="32">
-            <use xlink:href="#cup-first-outline"></use>
-          </svg>
-          <h6 class="mb-2 text-lg font-semibold text-black">Коректни цени</h6>
-          <p class="text-dark text-sm">Без скрити такси. Прозрачно ценообразуване за всички услуги.</p>
-        </div>
-        <div class="bg-white text-center px-4 py-6 border border-gray-200 rounded-xl transition-all duration-300 hover:-translate-y-1.5 hover:shadow-xl hover:border-accent">
-          <svg class="text-accent my-3 mx-auto transition-transform duration-300 hover:scale-110" width="32" height="32">
-            <use xlink:href="#battery-charge-outline"></use>
-          </svg>
-          <h6 class="mb-2 text-lg font-semibold text-black">Опит и професионално оборудване</h6>
-          <p class="text-dark text-sm">Работим с модерна техника и дългогодишен опит в сектора.</p>
-        </div>
-        <div class="bg-white text-center px-4 py-6 border border-gray-200 rounded-xl transition-all duration-300 hover:-translate-y-1.5 hover:shadow-xl hover:border-accent">
-          <svg class="text-accent my-3 mx-auto transition-transform duration-300 hover:scale-110" width="32" height="32">
-            <use xlink:href="#smart-vacuum-cleaner-outline"></use>
-          </svg>
-          <h6 class="mb-2 text-lg font-semibold text-black">Чисто и подредено</h6>
-          <p class="text-dark text-sm">Гарантираме отличен резултат без излишни ангажименти.</p>
-        </div>
-        <div class="bg-white text-center px-4 py-6 border border-gray-200 rounded-xl transition-all duration-300 hover:-translate-y-1.5 hover:shadow-xl hover:border-accent">
-          <svg class="text-accent my-3 mx-auto transition-transform duration-300 hover:scale-110" width="32" height="32">
-            <use xlink:href="#call-chat-rounded-outline"></use>
-          </svg>
-          <h6 class="mb-2 text-lg font-semibold text-black">Коректно отношение</h6>
-          <p class="text-dark text-sm">Професионален подход към всеки клиент и проект.</p>
-        </div>
-        <div class="bg-white text-center px-4 py-6 border border-gray-200 rounded-xl transition-all duration-300 hover:-translate-y-1.5 hover:shadow-xl hover:border-accent">
-          <svg class="text-accent my-3 mx-auto transition-transform duration-300 hover:scale-110" width="32" height="32">
-            <use xlink:href="#location"></use>
-          </svg>
-          <h6 class="mb-2 text-lg font-semibold text-black">Локално обслужване</h6>
-          <p class="text-dark text-sm">Работим в гр. Павликени и цялата Великотърновска област.</p>
-        </div>
-      </div>
-    </div>
-  </section>
+      <!-- Services Section -->
+      <section id="services" class="scroll-mt-28 border-t border-slate-100 bg-slate-50 py-16 md:py-20">
+        <div class="mx-auto max-w-6xl px-4 sm:px-6 lg:px-8">
+          <h2 class="text-2xl font-semibold text-slate-900 sm:text-3xl">
+            Услуги в Павликени и Великотърновска област
+          </h2>
+          <p class="mt-3 max-w-2xl text-base text-slate-600">
+            Избираме бързи и безопасни решения за дворове, домове и обекти. Работим в Павликени и
+            цялата Великотърновска област с ясни цени и професионално оборудване.
+          </p>
 
-  <section id="call" class="my-20 md:my-32">
-    <div class="container mx-auto px-4">
-      <div class="relative rounded-2xl overflow-hidden bg-gradient-to-r from-[#18A7E4] via-[#1BADEC] to-[#0A9CDB]">
-        <div class="grid grid-cols-1 lg:grid-cols-12">
-          <div class="lg:col-span-4 hidden lg:block">
-            <div class="absolute top-0 left-5">
-              <svg class="text-light-blue opacity-20" width="300" height="300">
-                <use xlink:href="#call-chat-rounded-outline"></use>
-              </svg>
-            </div>
+          <div class="mt-12 grid gap-8 lg:grid-cols-2">
+            <article id="service-kosene" class="scroll-mt-28 rounded-2xl border border-slate-100 bg-white p-6 shadow-soft space-y-4">
+              <h3 class="text-xl font-semibold text-slate-900">Косене и поддръжка на дворове в Павликени и Великотърновска област</h3>
+              <p class="mt-3 text-sm leading-7 text-slate-600">
+                Предлагаме професионално косене на дворове, ливади и парцели в Павликени и цялата
+                Великотърновска област. Работим с косачки и тример за труднодостъпни зони, като
+                осигуряваме чист и равномерен резултат без пропуски. Подходящи сме за сезонна
+                поддръжка, спешни заявки след буря или подготовка на имот за продажба и строеж.
+                Организираме график според нуждите ви и извозваме зелената маса до регламентирано
+                депо, за да остане дворът подреден. Получавате коректна цена, ясни срокове и
+                внимателно отношение към растенията и оградите.
+              </p>
+              <div class="mt-4">
+                <p class="text-sm font-semibold text-slate-900">Какво включва услугата</p>
+                <ul class="mt-2 list-disc pl-5 text-sm text-slate-600">
+                  <li>Косене на трева и плевели</li>
+                  <li>Тример и обработка на ръбове</li>
+                  <li>Събиране и извозване на зелена маса</li>
+                </ul>
+              </div>
+              <div class="mt-5 flex flex-col gap-3 sm:flex-row">
+                <a href="tel:+359887079976" class="rounded-full bg-brandGreen px-5 py-2 text-sm font-semibold text-white shadow-soft">Обади се</a>
+                <a href="#contact" class="rounded-full border border-slate-200 px-5 py-2 text-sm font-semibold text-slate-800">Безплатна оферта</a>
+              </div>
+            </article>
+
+            <article id="service-pochistvane" class="scroll-mt-28 rounded-2xl border border-slate-100 bg-white p-6 shadow-soft space-y-4">
+              <h3 class="text-xl font-semibold text-slate-900">Почистване на къщи и апартаменти в Павликени и Великотърновска област</h3>
+              <p class="mt-3 text-sm leading-7 text-slate-600">
+                Организираме почистване на апартаменти, къщи, офиси и входове в Павликени и
+                Великотърновска област с оферта според площта и типа замърсяване. Подходящи сме за
+                основно почистване, почистване след ремонт, поддръжка на наемни имоти и подготовка
+                за настаняване или оглед. Работим с професионални препарати и стриктен контрол на
+                детайлите, така че помещенията да са свежи и готови за ползване. Можем да реагираме
+                в кратки срокове и да включим изнасяне на дребни отпадъци. Получавате чистота,
+                подреден процес и точност към уговорените часове.
+              </p>
+              <div class="mt-4">
+                <p class="text-sm font-semibold text-slate-900">Какво включва услугата</p>
+                <ul class="mt-2 list-disc pl-5 text-sm text-slate-600">
+                  <li>Почистване след ремонт и строителни дейности</li>
+                  <li>Прахосмукиране, миене и дезинфекция</li>
+                  <li>Изнасяне на дребни отпадъци</li>
+                </ul>
+              </div>
+              <div class="mt-5 flex flex-col gap-3 sm:flex-row">
+                <a href="tel:+359887079976" class="rounded-full bg-brandGreen px-5 py-2 text-sm font-semibold text-white shadow-soft">Обади се</a>
+                <a href="#contact" class="rounded-full border border-slate-200 px-5 py-2 text-sm font-semibold text-slate-800">Безплатна оферта</a>
+              </div>
+            </article>
+
+            <article id="service-darveta" class="scroll-mt-28 rounded-2xl border border-slate-100 bg-white p-6 shadow-soft space-y-4">
+              <h3 class="text-xl font-semibold text-slate-900">Рязане и премахване на дървета в Павликени и Великотърновска област</h3>
+              <p class="mt-3 text-sm leading-7 text-slate-600">
+                Извършваме рязане на дървета, кастрене и разчистване на терени в Павликени и
+                Великотърновска област. Планираме работата според вида, височината и близостта до
+                сгради, огради и електропроводи, за да гарантираме безопасност. Подходящи сме за
+                дворове, парцели, сервизни зони и места с ограничен достъп, като използваме техника
+                за контролирано сваляне на клони и стволове. Осигуряваме събиране и извозване на
+                дървесината и зелените отпадъци до регламентирано депо. Получавате чист терен и
+                ясна комуникация за срокове и цена.
+              </p>
+              <div class="mt-4">
+                <p class="text-sm font-semibold text-slate-900">Какво включва услугата</p>
+                <ul class="mt-2 list-disc pl-5 text-sm text-slate-600">
+                  <li>Рязане и кастрене на дървета</li>
+                  <li>Разчистване на клони и храсти</li>
+                  <li>Извозване на зелени отпадъци</li>
+                </ul>
+              </div>
+              <div class="mt-5 flex flex-col gap-3 sm:flex-row">
+                <a href="tel:+359887079976" class="rounded-full bg-brandGreen px-5 py-2 text-sm font-semibold text-white shadow-soft">Обади се</a>
+                <a href="#contact" class="rounded-full border border-slate-200 px-5 py-2 text-sm font-semibold text-slate-800">Безплатна оферта</a>
+              </div>
+            </article>
+
+            <article id="service-bus" class="scroll-mt-28 rounded-2xl border border-slate-100 bg-white p-6 shadow-soft space-y-4">
+              <h3 class="text-xl font-semibold text-slate-900">Бус и транспортни услуги в Павликени и Великотърновска област</h3>
+              <p class="mt-3 text-sm leading-7 text-slate-600">
+                Предлагаме бус за транспорт в Павликени и Великотърновска област с гъвкави часове и
+                коректни цени. Решението е подходящо за мебели, техника, строителни материали и
+                доставки за фирми или частни клиенти, когато се търси сигурно преместване. Планираме
+                маршрута според обема и сроковете, като се грижим товарът да пристигне навреме и без
+                повреди. При нужда комбинираме транспорта с извозване на отпадъци или почистване
+                след разтоварване. Работим бързо, ясно и с предварително уточнени условия.
+              </p>
+              <div class="mt-4">
+                <p class="text-sm font-semibold text-slate-900">Какво включва услугата</p>
+                <ul class="mt-2 list-disc pl-5 text-sm text-slate-600">
+                  <li>Транспорт на мебели и техника</li>
+                  <li>Доставка на материали до обект</li>
+                  <li>Възможност за комбинирани услуги</li>
+                </ul>
+              </div>
+              <div class="mt-5 flex flex-col gap-3 sm:flex-row">
+                <a href="tel:+359887079976" class="rounded-full bg-brandGreen px-5 py-2 text-sm font-semibold text-white shadow-soft">Обади се</a>
+                <a href="#contact" class="rounded-full border border-slate-200 px-5 py-2 text-sm font-semibold text-slate-800">Безплатна оферта</a>
+              </div>
+            </article>
+
+            <article id="service-samosval" class="scroll-mt-28 rounded-2xl border border-slate-100 bg-white p-6 shadow-soft space-y-4">
+              <h3 class="text-xl font-semibold text-slate-900">Самосвал услуги в Павликени и Великотърновска област</h3>
+              <p class="mt-3 text-sm leading-7 text-slate-600">
+                Осигуряваме самосвал за насипи, инертни материали и извозване на обеми в Павликени
+                и Великотърновска област. Услугата е подходяща за строителни обекти, дворове,
+                земеделски имоти и ремонти, когато се изисква бърз и надежден превоз. Работим с ясна
+                логистика и гъвкави доставки, като съобразяваме товароносимостта и достъпа до
+                обекта. При нужда комбинираме самосвала с разчистване и извозване на отпадъци, за да
+                спестите време и разходи. Получавате сигурен курс и точни срокове.
+              </p>
+              <div class="mt-4">
+                <p class="text-sm font-semibold text-slate-900">Какво включва услугата</p>
+                <ul class="mt-2 list-disc pl-5 text-sm text-slate-600">
+                  <li>Транспорт на инертни материали</li>
+                  <li>Извозване на насипи и обеми</li>
+                  <li>Бърза организация на курс</li>
+                </ul>
+              </div>
+              <div class="mt-5 flex flex-col gap-3 sm:flex-row">
+                <a href="tel:+359887079976" class="rounded-full bg-brandGreen px-5 py-2 text-sm font-semibold text-white shadow-soft">Обади се</a>
+                <a href="#contact" class="rounded-full border border-slate-200 px-5 py-2 text-sm font-semibold text-slate-800">Безплатна оферта</a>
+              </div>
+            </article>
+
+            <article id="service-izvozvane" class="scroll-mt-28 rounded-2xl border border-slate-100 bg-white p-6 shadow-soft space-y-4">
+              <h3 class="text-xl font-semibold text-slate-900">Извозване на отпадъци в Павликени и Великотърновска област</h3>
+              <p class="mt-3 text-sm leading-7 text-slate-600">
+                Предлагаме регламентирано извозване на строителни и битови отпадъци от Павликени и
+                Великотърновска област до лицензирани депа. Работим с частни лица и фирми при
+                ремонти, почистване на дворове и разчистване на складове, като осигуряваме бърза
+                организация и ясна цена. Екипът ни събира, товари и транспортира отпадъците така,
+                че обектът да остане чист и готов за следващите дейности. Поддържаме точни срокове,
+                коректна комуникация и възможност за изпълнение още в същия ден. Подходящо решение
+                за жилища, бизнеси и строителни обекти.
+              </p>
+              <div class="mt-4">
+                <p class="text-sm font-semibold text-slate-900">Какво включва услугата</p>
+                <ul class="mt-2 list-disc pl-5 text-sm text-slate-600">
+                  <li>Товарене и извозване до депо</li>
+                  <li>Изчистване след ремонт или почистване</li>
+                  <li>Доклад за обема при нужда</li>
+                </ul>
+              </div>
+              <div class="mt-5 flex flex-col gap-3 sm:flex-row">
+                <a href="tel:+359887079976" class="rounded-full bg-brandGreen px-5 py-2 text-sm font-semibold text-white shadow-soft">Обади се</a>
+                <a href="#contact" class="rounded-full border border-slate-200 px-5 py-2 text-sm font-semibold text-slate-800">Безплатна оферта</a>
+              </div>
+            </article>
           </div>
-          <div class="lg:col-span-8 relative z-10 py-12 px-6 lg:px-8">
-            <h2 class="text-white text-3xl md:text-4xl font-bold mb-4 drop-shadow-lg">Обадете се сега: 0887 079 976</h2>
-            <p class="text-lg md:text-xl capitalize text-white">Безплатна оферта за всички услуги. Бърза реакция и коректно отношение.</p>
+        </div>
+      </section>
+
+      <!-- Gallery Section -->
+      <section id="gallery" class="scroll-mt-28 py-16 md:py-20">
+        <div class="mx-auto max-w-6xl px-4 sm:px-6 lg:px-8">
+          <h2 class="text-2xl font-semibold text-slate-900 sm:text-3xl">
+            Галерия с реални обекти и изпълнени услуги
+          </h2>
+          <p class="mt-3 max-w-2xl text-base text-slate-600">
+            Подбрани снимки от терени, дворове, почиствания и транспортни услуги в региона.
+          </p>
+
+          <div class="mt-8 grid grid-cols-2 gap-4 sm:grid-cols-3 lg:grid-cols-4" id="gallery-grid" aria-live="polite"></div>
+          <div class="mt-8 flex justify-center">
+            <button
+              type="button"
+              id="gallery-show-more"
+              class="inline-flex items-center justify-center rounded-full bg-brandGreen px-8 py-4 text-base font-semibold text-white shadow-soft transition hover:bg-green-600 hover:shadow-md"
+            >
+              Покажи още снимки
+            </button>
           </div>
-        </div>
-      </div>
-    </div>
-  </section>
 
-
-  <section id="quote" class="bg-gray-100 py-20 md:py-32 my-20 md:my-32">
-    <div class="container mx-auto px-4 text-center">
-      <div class="mb-8">
-        <h3 class="text-3xl md:text-4xl font-bold text-black mb-4 relative inline-block pb-4 after:content-[''] after:absolute after:bottom-0 after:left-1/2 after:-translate-x-1/2 after:w-16 after:h-1 after:bg-gradient-to-r after:from-primary after:to-accent after:rounded">Заявка за безплатна оферта</h3>
-        <p class="text-lg md:text-xl mt-3 text-dark">Обадете се на <strong class="text-primary">0887 079 976</strong> или попълнете формата по-долу</p>
-      </div>
-      <form class="max-w-4xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-4 mt-8">
-        <div class="md:col-span-1">
-          <input type="text" name="name" placeholder="Име" class="w-full h-[60px] border-2 border-gray-300 px-5 rounded-xl focus:outline-none focus:ring-2 focus:ring-accent focus:border-transparent transition-all duration-300 hover:border-dark">
-        </div>
-        <div class="md:col-span-1">
-          <input type="email" name="email" placeholder="Имейл" class="w-full h-[60px] border-2 border-gray-300 px-5 rounded-xl focus:outline-none focus:ring-2 focus:ring-accent focus:border-transparent transition-all duration-300 hover:border-dark">
-        </div>
-        <div class="md:col-span-1">
-          <input type="text" name="phone" placeholder="Телефон" class="w-full h-[60px] border-2 border-gray-300 px-5 rounded-xl focus:outline-none focus:ring-2 focus:ring-accent focus:border-transparent transition-all duration-300 hover:border-dark">
-        </div>
-        <div class="md:col-span-1">
-          <input type="text" name="city" placeholder="Населено място" class="w-full h-[60px] border-2 border-gray-300 px-5 rounded-xl focus:outline-none focus:ring-2 focus:ring-accent focus:border-transparent transition-all duration-300 hover:border-dark">
-        </div>
-        <div class="md:col-span-2">
-          <input type="text" name="property" placeholder="Адрес на обекта" class="w-full h-[60px] border-2 border-gray-300 px-5 rounded-xl focus:outline-none focus:ring-2 focus:ring-accent focus:border-transparent transition-all duration-300 hover:border-dark">
-        </div>
-        <div class="md:col-span-2">
-          <select class="w-full h-[60px] border-2 border-gray-300 rounded-xl px-5 focus:outline-none focus:ring-2 focus:ring-accent focus:border-transparent transition-all duration-300 hover:border-dark" name="choose">
-            <option value="Select Your Service">Изберете услуга</option>
-            <option value="Service">🌿 Косене и поддръжка на тревни площи</option>
-            <option value="Service">🧹 Почистване на дворове, къщи и апартаменти</option>
-            <option value="Service">🌳 Рязане и събаряне на дървета</option>
-            <option value="Service">🚐 Услуги с бус</option>
-            <option value="Service">🚚 Услуги със самосвал</option>
-            <option value="Service">♻️ Извозване на строителни и битови отпадъци</option>
-          </select>
-        </div>
-        <div class="md:col-span-2">
-          <textarea class="w-full min-h-[120px] border-2 border-gray-300 p-5 rounded-xl focus:outline-none focus:ring-2 focus:ring-accent focus:border-transparent transition-all duration-300 hover:border-dark" name="details" placeholder="Допълнителна информация"></textarea>
-        </div>
-      </form>
-      <a href="tel:0887079976" class="inline-block px-8 py-3.5 bg-gradient-to-r from-primary to-[#FF9F40] text-white uppercase font-semibold rounded-full shadow-lg hover:shadow-xl hover:-translate-y-0.5 transition-all duration-300 hover:from-accent hover:to-[#1BB8F5] mt-6">Изпрати</a>
-      <p class="mt-6 text-dark">Или се обадете директно: <a href="tel:0887079976" class="font-bold text-primary hover:text-accent transition-colors">0887 079 976</a></p>
-    </div>
-  </section>
-
-
-  <section id="faqs" class="bg-gray-100 py-20 md:py-32 my-20 md:my-32 mb-0">
-    <div class="container mx-auto px-4">
-      <div class="max-w-3xl mx-auto">
-        <div class="accordion" id="accordion">
-          <div class="bg-white border-0 rounded-xl mb-3 shadow-sm hover:shadow-md transition-shadow duration-300">
-            <h5 class="accordion-header">
-              <button class="accordion-button bg-transparent focus:outline-none capitalize shadow-none w-full text-left px-6 py-4 rounded-xl transition-colors duration-300 hover:bg-accent/5" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
-                В кои райони работите?
+          <div id="lightbox" class="fixed inset-0 z-50 hidden items-center justify-center bg-slate-900/80 p-4" role="dialog" aria-modal="true" aria-hidden="true">
+            <div class="relative flex h-full w-full items-center justify-center">
+              <button
+                type="button"
+                class="absolute top-4 right-4 inline-flex items-center gap-2 rounded-full bg-white/95 px-4 py-2 text-sm font-semibold text-slate-900 shadow-soft transition hover:bg-white"
+                data-lightbox-close
+                aria-label="Затвори галерията"
+              >
+                <svg class="h-4 w-4 text-slate-500" viewBox="0 0 24 24" fill="none" stroke="currentColor">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 6l12 12M18 6l-12 12" />
+                </svg>
+                Затвори
               </button>
-            </h5>
-            <div id="collapseOne" class="accordion-collapse border-0 collapse show" data-bs-parent="#accordion">
-              <div class="accordion-body pt-0 px-6 pb-4">
-                <p class="text-dark">Работим в гр. Павликени и цялата Великотърновска област. Обслужваме както частни лица, така и фирми.</p>
+              <button type="button" class="fixed left-4 top-1/2 -translate-y-1/2 rounded-full bg-white/90 p-2 text-slate-900 shadow-soft" aria-label="Предишна снимка" data-lightbox-prev>
+                <svg class="h-5 w-5 text-gray-500" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7" />
+                </svg>
+              </button>
+              <button type="button" class="fixed right-4 top-1/2 -translate-y-1/2 rounded-full bg-white/90 p-2 text-slate-900 shadow-soft" aria-label="Следваща снимка" data-lightbox-next>
+                <svg class="h-5 w-5 text-gray-500" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
+                </svg>
+              </button>
+              <img id="lightbox-image" class="mx-auto max-h-[85vh] max-w-[90vw] rounded-2xl object-contain" alt="" />
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Area Section -->
+      <section id="area" class="scroll-mt-28 border-t border-slate-100 bg-slate-50 py-16 md:py-20">
+        <div class="mx-auto max-w-6xl px-4 sm:px-6 lg:px-8">
+          <div class="grid gap-10 lg:grid-cols-[1fr_1.15fr] lg:items-start">
+            <div class="rounded-3xl border border-slate-100 bg-white p-6 shadow-soft sm:p-8">
+              <div class="inline-flex items-center gap-2 rounded-full border border-slate-200 bg-white px-3 py-1 text-xs font-semibold text-slate-600">
+                <span class="h-2 w-2 rounded-full bg-brandGreen"></span>
+                Обслужване в региона
+              </div>
+              <h2 class="mt-4 text-2xl font-semibold text-slate-900 sm:text-3xl">
+                Район на обслужване: Павликени и Великотърновска област
+              </h2>
+              <p class="mt-3 text-base text-slate-600">
+                Работим в Павликени, Велико Търново и близките населени места, като покриваме цялата
+                Великотърновска област. Реагираме бързо както за частни имоти, така и за фирмени
+                обекти, включително при спешни заявки и сезонна поддръжка.
+              </p>
+
+              <div class="mt-6 flex flex-wrap gap-2 text-xs font-semibold text-slate-600">
+                <span class="rounded-full border border-slate-200 bg-white px-3 py-1">Бърз отговор: до 24ч</span>
+                <span class="rounded-full border border-slate-200 bg-white px-3 py-1">Област: Велико Търново</span>
+                <span class="rounded-full border border-slate-200 bg-white px-3 py-1">Град: Павликени</span>
+              </div>
+
+              <div class="mt-6">
+                <p class="text-sm font-semibold text-slate-900">Често посещавани населени места</p>
+                <div class="mt-3 flex flex-wrap gap-2 text-xs font-semibold text-slate-600">
+                  <span class="rounded-full border border-slate-200 px-3 py-1">Павликени</span>
+                  <span class="rounded-full border border-slate-200 px-3 py-1">Бяла черква</span>
+                  <span class="rounded-full border border-slate-200 px-3 py-1">Велико Търново</span>
+                  <span class="rounded-full border border-slate-200 px-3 py-1">Сухиндол</span>
+                  <span class="rounded-full border border-slate-200 px-3 py-1">Долна Оряховица</span>
+                  <span class="rounded-full border border-slate-200 px-3 py-1">Горна Оряховица</span>
+                  <span class="rounded-full border border-slate-200 px-3 py-1">Полски Тръмбеш</span>
+                  <span class="rounded-full border border-slate-200 px-3 py-1">Лясковец</span>
+                </div>
+              </div>
+            </div>
+
+            <div class="rounded-3xl border border-slate-100 bg-white p-4 shadow-soft">
+              <div class="flex items-center justify-between px-2 pb-4">
+                <p class="text-sm font-semibold text-slate-900">Карта на района</p>
+                <span class="text-xs font-semibold text-slate-500">Google Maps</span>
+              </div>
+              <div class="relative overflow-hidden rounded-2xl border border-slate-200 bg-white">
+                <iframe
+                  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d737596.079793054!2d24.964857677137744!3d43.21499478117482!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x40a92d629ff5d239%3A0x300a01269bf4dd0!2z0JLQtdC70LjQutC-INCi0YrRgNC90L7QstC-!5e1!3m2!1sbg!2sbg!4v1768905732762!5m2!1sbg!2sbg"
+                  class="aspect-[16/10] w-full"
+                  style="border:0;"
+                  allowfullscreen=""
+                  loading="lazy"
+                  referrerpolicy="no-referrer-when-downgrade"
+                  title="Карта на района на обслужване"
+                ></iframe>
               </div>
             </div>
           </div>
-          <div class="bg-white border-0 rounded-xl mb-3 shadow-sm hover:shadow-md transition-shadow duration-300">
-            <h5 class="accordion-header">
-              <button class="accordion-button bg-transparent collapsed focus:outline-none capitalize shadow-none w-full text-left px-6 py-4 rounded-xl transition-colors duration-300 hover:bg-accent/5" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
-                Колко бързо можете да реагирате?
-              </button>
-            </h5>
-            <div id="collapseTwo" class="accordion-collapse collapse" data-bs-parent="#accordion">
-              <div class="accordion-body pt-0 px-6 pb-4">
-                <p class="text-dark">Осигуряваме бърза реакция - често още същия ден. Просто се обадете на 0887 079 976 и ще организираме услугата възможно най-бързо.</p>
-              </div>
+
+          <div class="mt-10 flex flex-col gap-3 rounded-2xl border border-slate-100 bg-white p-6 shadow-soft sm:flex-row sm:items-center sm:justify-between">
+            <div>
+              <p class="text-sm font-semibold text-slate-900">Нужна ти е бърза услуга в Павликени?</p>
+              <p class="text-sm text-slate-600">Свържи се с нас и получи оферта още днес.</p>
             </div>
-          </div>
-          <div class="bg-white border-0 rounded-xl mb-3 shadow-sm hover:shadow-md transition-shadow duration-300">
-            <h5 class="accordion-header">
-              <button class="accordion-button bg-transparent collapsed focus:outline-none capitalize shadow-none w-full text-left px-6 py-4 rounded-xl transition-colors duration-300 hover:bg-accent/5" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
-                Какви са вашите цени?
-              </button>
-            </h5>
-            <div id="collapseThree" class="accordion-collapse collapse" data-bs-parent="#accordion">
-              <div class="accordion-body pt-0 px-6 pb-4">
-                <p class="text-dark">Предлагаме коректни цени без скрити такси. Всяка услуга се оценява индивидуално според обема и сложността на работата. Свържете се с нас за безплатна оферта.</p>
-              </div>
-            </div>
-          </div>
-          <div class="bg-white border-0 rounded-xl mb-3 shadow-sm hover:shadow-md transition-shadow duration-300">
-            <h5 class="accordion-header">
-              <button class="accordion-button bg-transparent collapsed focus:outline-none capitalize shadow-none w-full text-left px-6 py-4 rounded-xl transition-colors duration-300 hover:bg-accent/5" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFour" aria-expanded="false" aria-controls="collapseFour">
-                Имате ли професионално оборудване?
-              </button>
-            </h5>
-            <div id="collapseFour" class="accordion-collapse collapse" data-bs-parent="#accordion">
-              <div class="accordion-body pt-0 px-6 pb-4">
-                <p class="text-dark">Да, работим с професионално оборудване за всички услуги - косене, почистване, транспорт с бус и самосвал. Не е необходимо да осигурявате оборудване.</p>
-              </div>
-            </div>
-          </div>
-          <div class="bg-white border-0 rounded-xl mb-3 shadow-sm hover:shadow-md transition-shadow duration-300">
-            <h5 class="accordion-header">
-              <button class="accordion-button bg-transparent collapsed focus:outline-none capitalize shadow-none w-full text-left px-6 py-4 rounded-xl transition-colors duration-300 hover:bg-accent/5" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFive" aria-expanded="false" aria-controls="collapseFive">
-                До къде извозвате отпадъците?
-              </button>
-            </h5>
-            <div id="collapseFive" class="accordion-collapse collapse" data-bs-parent="#accordion">
-              <div class="accordion-body pt-0 px-6 pb-4">
-                <p class="text-dark">Извозваме всички отпадъци само до регламентирани депа, в съответствие с всички екологични и правни изисквания.</p>
-              </div>
+            <div class="flex flex-col gap-3 sm:flex-row">
+              <a href="tel:+359887079976" class="rounded-full bg-brandGreen px-5 py-2 text-sm font-semibold text-white shadow-soft">Обади се</a>
+              <a href="#contact" class="rounded-full border border-slate-200 px-5 py-2 text-sm font-semibold text-slate-800">Безплатна оферта</a>
             </div>
           </div>
         </div>
-      </div>
-    </div>
-  </section>
+      </section>
 
-  <section id="contact-info" class="py-12 bg-gradient-to-r from-[#18A7E4] via-[#1BADEC] to-[#0A9CDB]">
-    <div class="container mx-auto px-4">
-      <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
-        <div class="flex items-center group">
-          <svg class="text-light-blue mr-3 transition-all duration-300 group-hover:scale-110 group-hover:rotate-6" width="90" height="90">
-            <use xlink:href="#call-chat-rounded-outline" />
-          </svg>
-          <div class="ml-3">
-            <h5 class="text-white mb-0 font-semibold">Обадете се</h5>
-            <h5 class="font-light text-white"><a href="tel:0887079976" class="text-white no-underline hover:text-light-blue transition-colors">0887 079 976</a></h5>
+      <!-- Reviews Section -->
+      <section id="reviews" class="scroll-mt-28 py-16 md:py-20">
+        <div class="mx-auto max-w-6xl px-4 sm:px-6 lg:px-8">
+          <h2 class="text-2xl font-semibold text-slate-900 sm:text-3xl">Как работим</h2>
+          <p class="mt-3 max-w-2xl text-base text-slate-600">
+            Бърз и ясен процес, който пести време и гарантира качествен резултат.
+          </p>
+
+          <div class="mt-8 grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
+            <div class="rounded-2xl border border-slate-100 bg-white p-6 text-left shadow-soft">
+              <div class="flex h-12 w-12 items-center justify-center rounded-xl bg-slate-50 text-lg font-semibold text-slate-700">
+                1
+              </div>
+              <p class="mt-4 text-base font-semibold text-slate-900">Обаждане или снимки по Viber</p>
+              <p class="mt-2 text-sm text-slate-600">
+                Обясняваш нуждите си и изпращаш снимки за бърза ориентация.
+              </p>
+            </div>
+            <div class="rounded-2xl border border-slate-100 bg-white p-6 text-left shadow-soft">
+              <div class="flex h-12 w-12 items-center justify-center rounded-xl bg-slate-50 text-lg font-semibold text-slate-700">
+                2
+              </div>
+              <p class="mt-4 text-base font-semibold text-slate-900">Безплатна оферта</p>
+              <p class="mt-2 text-sm text-slate-600">
+                Получаваш ясна цена и график, съобразени с обекта и сроковете.
+              </p>
+            </div>
+            <div class="rounded-2xl border border-slate-100 bg-white p-6 text-left shadow-soft">
+              <div class="flex h-12 w-12 items-center justify-center rounded-xl bg-slate-50 text-lg font-semibold text-slate-700">
+                3
+              </div>
+              <p class="mt-4 text-base font-semibold text-slate-900">Изпълнение в удобен ден</p>
+              <p class="mt-2 text-sm text-slate-600">
+                Работим в удобен ден, често още същия, с професионално оборудване.
+              </p>
+            </div>
+            <div class="rounded-2xl border border-slate-100 bg-white p-6 text-left shadow-soft">
+              <div class="flex h-12 w-12 items-center justify-center rounded-xl bg-slate-50 text-lg font-semibold text-slate-700">
+                4
+              </div>
+              <p class="mt-4 text-base font-semibold text-slate-900">Извозване и финално почистване</p>
+              <p class="mt-2 text-sm text-slate-600">
+                Извозваме до регламентирани депа и оставяме обекта напълно подреден.
+              </p>
+            </div>
+          </div>
+
+          <div class="mt-8 flex flex-wrap items-center gap-3 text-sm font-semibold text-slate-600">
+            <span class="rounded-full bg-slate-100 px-4 py-2">Без скрити такси</span>
+            <span class="rounded-full bg-slate-100 px-4 py-2">Професионално оборудване</span>
+            <span class="rounded-full bg-slate-100 px-4 py-2">Коректно отношение</span>
+          </div>
+
+          <div class="mt-10 flex flex-col gap-3 rounded-2xl border border-slate-100 bg-white p-6 shadow-soft sm:flex-row sm:items-center sm:justify-between">
+            <div>
+              <p class="text-sm font-semibold text-slate-900">Готови сме да помогнем веднага</p>
+              <p class="text-sm text-slate-600">Обади се или остави запитване онлайн.</p>
+            </div>
+            <div class="flex flex-col gap-3 sm:flex-row">
+              <a href="tel:+359887079976" class="rounded-full bg-brandGreen px-5 py-2 text-sm font-semibold text-white shadow-soft">Обади се</a>
+              <a href="#contact" class="rounded-full border border-slate-200 px-5 py-2 text-sm font-semibold text-slate-800">Безплатна оферта</a>
+            </div>
           </div>
         </div>
-        <div class="flex items-center group">
-          <svg class="text-light-blue mr-3 transition-all duration-300 group-hover:scale-110 group-hover:rotate-6" width="90" height="90">
-            <use xlink:href="#point-on-map-outline" />
-          </svg>
-          <div class="ml-3">
-            <h5 class="text-white mb-0 font-semibold">Район на обслужване</h5>
-            <h5 class="font-light text-white">гр. Павликени и Великотърновска област</h5>
-          </div>
-        </div>
-        <div class="flex items-center group">
-          <svg class="text-light-blue mr-3 transition-all duration-300 group-hover:scale-110 group-hover:rotate-6" width="90" height="90">
-            <use xlink:href="#pen-new-round-outline" />
-          </svg>
-          <div class="ml-3">
-            <h5 class="text-white mb-0 font-semibold">Безплатна оферта</h5>
-            <h5 class="font-light text-white underline"><a href="#quote" class="text-white hover:text-light-blue transition-colors">Заявка за оферта</a></h5>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
+      </section>
 
-  <footer id="footer" class="bg-gray-900 text-white">
-    <div class="container mx-auto px-4 py-20">
-      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-10">
-        <div>
-          <h4 class="text-xl font-bold tracking-wide mb-4">STEFAN-PAVLIKENI</h4>
-          <p class="text-gray-300 mb-6">Услуги за двор, почистване и транспорт в гр. Павликени и Великотърновска област. Бърза реакция и коректно отношение.</p>
-          <ul class="space-y-2 text-sm text-gray-300">
-            <li class="flex items-center gap-2">
-              <svg class="text-accent" width="16" height="16"><use xlink:href="#phone"></use></svg>
-              <a href="tel:0887079976" class="hover:text-white transition-colors">0887 079 976</a>
-            </li>
-            <li class="flex items-center gap-2">
-              <svg class="text-accent" width="16" height="16"><use xlink:href="#location"></use></svg>
-              гр. Павликени и Великотърновска област
-            </li>
-          </ul>
-        </div>
+      <!-- FAQ Section -->
+      <section id="faq" class="scroll-mt-28 border-t border-slate-100 bg-slate-50 py-16 md:py-20">
+        <div class="mx-auto max-w-6xl px-4 sm:px-6 lg:px-8">
+          <h2 class="text-2xl font-semibold text-slate-900 sm:text-3xl">
+            Често задавани въпроси за Павликени и Великотърновска област
+          </h2>
+          <p class="mt-3 max-w-2xl text-base text-slate-600">
+            Отговори на най-важните въпроси за услугите, цените и организацията.
+          </p>
 
-        <div>
-          <h6 class="font-semibold text-lg mb-4">Услуги</h6>
-          <ul class="flex flex-col gap-2 list-none p-0 m-0 text-gray-300">
-            <li><a href="#our-services" class="hover:text-white transition-all duration-300 inline-block hover:translate-x-1">🌿 Косене и поддръжка</a></li>
-            <li><a href="#our-services" class="hover:text-white transition-all duration-300 inline-block hover:translate-x-1">🧹 Почистване</a></li>
-            <li><a href="#our-services" class="hover:text-white transition-all duration-300 inline-block hover:translate-x-1">🌳 Рязане на дървета</a></li>
-            <li><a href="#our-services" class="hover:text-white transition-all duration-300 inline-block hover:translate-x-1">🚐 Услуги с бус</a></li>
-            <li><a href="#our-services" class="hover:text-white transition-all duration-300 inline-block hover:translate-x-1">🚚 Услуги със самосвал</a></li>
-            <li><a href="#our-services" class="hover:text-white transition-all duration-300 inline-block hover:translate-x-1">♻️ Извозване на отпадъци</a></li>
-          </ul>
-        </div>
-
-        <div>
-          <h6 class="font-semibold text-lg mb-4">Информация</h6>
-          <ul class="flex flex-col gap-2 list-none p-0 m-0 text-gray-300">
-            <li><a href="#about-us" class="hover:text-white transition-all duration-300 inline-block hover:translate-x-1">За нас</a></li>
-            <li><a href="#features" class="hover:text-white transition-all duration-300 inline-block hover:translate-x-1">Предимства</a></li>
-            <li><a href="#faqs" class="hover:text-white transition-all duration-300 inline-block hover:translate-x-1">Често задавани въпроси</a></li>
-            <li><a href="#quote" class="hover:text-white transition-all duration-300 inline-block hover:translate-x-1">Свържете се с нас</a></li>
-          </ul>
-        </div>
-
-        <div>
-          <h6 class="font-semibold text-lg mb-4">Заявка за услуга</h6>
-          <p class="text-gray-300 mb-4">Обадете се за безплатна оферта и бърза реакция.</p>
-          <a class="inline-flex items-center justify-center w-full px-6 py-3 bg-gradient-to-r from-primary to-[#FF9F40] text-white uppercase text-xs font-semibold rounded-full shadow-lg hover:shadow-xl hover:-translate-y-0.5 transition-all duration-300 hover:from-accent hover:to-[#1BB8F5]" href="#quote">Заявка за оферта</a>
-          <p class="text-gray-300 mt-4 text-sm">Телефон: <a class="text-white font-semibold hover:text-accent transition-colors" href="tel:0887079976">0887 079 976</a></p>
-        </div>
-      </div>
-    </div>
-    <div class="border-t border-white/10">
-      <div class="container mx-auto px-4 py-5 flex flex-col md:flex-row justify-between items-center text-center gap-3 text-sm text-gray-400">
-        <p>© 2024 Услуги за двор, почистване и транспорт - гр. Павликени и Великотърновска област</p>
-        <p>Телефон: <a href="tel:0887079976" class="underline hover:text-white transition-colors">0887 079 976</a></p>
-      </div>
-    </div>
-  </footer>
-
-  <!-- Video Popup -->
-  <div class="modal fade fixed inset-0 z-50 hidden overflow-y-auto" id="myModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
-    <div class="modal-dialog relative w-auto max-w-4xl mx-auto my-8" role="document">
-        <div class="modal-content relative bg-white rounded-lg shadow-xl p-0">
-            <div class="modal-body p-0">
-                <button type="button" class="absolute top-4 right-4 z-10 bg-white/80 hover:bg-white rounded-full p-2 transition-colors" data-bs-dismiss="modal" aria-label="Close">
-                  <svg class="w-6 h-6 text-dark" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path>
+          <div class="mt-8 rounded-2xl border border-slate-100 bg-white shadow-soft">
+            <div class="divide-y divide-slate-100" data-accordion>
+              <div class="p-6">
+                <button type="button" class="flex w-full items-center justify-between text-left text-base font-semibold text-slate-900" aria-expanded="false" aria-controls="faq-1">
+                  Как се формира цената за косене и почистване в Павликени?
+                  <svg class="h-5 w-5 text-gray-500 transition-transform" viewBox="0 0 24 24" fill="none" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 9l6 6 6-6" />
                   </svg>
                 </button>
-                <div class="relative pb-[56.25%] h-0 overflow-hidden">
-                  <iframe class="absolute top-0 left-0 w-full h-full" src="" id="video" allowscriptaccess="always" allow="autoplay"></iframe>
+                <div id="faq-1" class="overflow-hidden text-sm text-slate-600 transition-[max-height] duration-300 ease-in-out" aria-hidden="true">
+                  <div class="pt-4">
+                    Цената се определя според площта, достъпа, обема отпадъци и нужната техника. В
+                    Павликени и Великотърновска област правим оглед по снимки или на място и даваме
+                    точна оферта без фиксирани тарифи.
+                  </div>
                 </div>
+              </div>
+
+              <div class="p-6">
+                <button type="button" class="flex w-full items-center justify-between text-left text-base font-semibold text-slate-900" aria-expanded="false" aria-controls="faq-2">
+                  Имате ли възможност за услуга още същия ден?
+                  <svg class="h-5 w-5 text-gray-500 transition-transform" viewBox="0 0 24 24" fill="none" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 9l6 6 6-6" />
+                  </svg>
+                </button>
+                <div id="faq-2" class="overflow-hidden text-sm text-slate-600 transition-[max-height] duration-300 ease-in-out" aria-hidden="true">
+                  <div class="pt-4">
+                    При свободен график можем да реагираме още същия ден в Павликени или близките
+                    населени места. Най-бързо става при изпратени снимки и ясна информация за обекта.
+                  </div>
+                </div>
+              </div>
+
+              <div class="p-6">
+                <button type="button" class="flex w-full items-center justify-between text-left text-base font-semibold text-slate-900" aria-expanded="false" aria-controls="faq-3">
+                  Кои райони обслужвате във Великотърновска област?
+                  <svg class="h-5 w-5 text-gray-500 transition-transform" viewBox="0 0 24 24" fill="none" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 9l6 6 6-6" />
+                  </svg>
+                </button>
+                <div id="faq-3" class="overflow-hidden text-sm text-slate-600 transition-[max-height] duration-300 ease-in-out" aria-hidden="true">
+                  <div class="pt-4">
+                    Основно работим в Павликени, Велико Търново и околните градове и села. При по-големи
+                    обекти покриваме цялата Великотърновска област след уточняване на график.
+                  </div>
+                </div>
+              </div>
+
+              <div class="p-6">
+                <button type="button" class="flex w-full items-center justify-between text-left text-base font-semibold text-slate-900" aria-expanded="false" aria-controls="faq-4">
+                  Къде се извозват отпадъците?
+                  <svg class="h-5 w-5 text-gray-500 transition-transform" viewBox="0 0 24 24" fill="none" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 9l6 6 6-6" />
+                  </svg>
+                </button>
+                <div id="faq-4" class="overflow-hidden text-sm text-slate-600 transition-[max-height] duration-300 ease-in-out" aria-hidden="true">
+                  <div class="pt-4">
+                    Всички отпадъци се извозват само до регламентирани депа, съгласно изискванията за
+                    Павликени и Великотърновска област. Това гарантира законно и безопасно депониране.
+                  </div>
+                </div>
+              </div>
+
+              <div class="p-6">
+                <button type="button" class="flex w-full items-center justify-between text-left text-base font-semibold text-slate-900" aria-expanded="false" aria-controls="faq-5">
+                  Предлагате ли абонамент за косене и поддръжка?
+                  <svg class="h-5 w-5 text-gray-500 transition-transform" viewBox="0 0 24 24" fill="none" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 9l6 6 6-6" />
+                  </svg>
+                </button>
+                <div id="faq-5" class="overflow-hidden text-sm text-slate-600 transition-[max-height] duration-300 ease-in-out" aria-hidden="true">
+                  <div class="pt-4">
+                    Да, можем да организираме регулярни посещения с подходяща честота според сезона и
+                    растежа на тревата. Това е удобна опция за имоти в Павликени и региона.
+                  </div>
+                </div>
+              </div>
+
+              <div class="p-6">
+                <button type="button" class="flex w-full items-center justify-between text-left text-base font-semibold text-slate-900" aria-expanded="false" aria-controls="faq-6">
+                  Правите ли почистване след ремонт?
+                  <svg class="h-5 w-5 text-gray-500 transition-transform" viewBox="0 0 24 24" fill="none" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 9l6 6 6-6" />
+                  </svg>
+                </button>
+                <div id="faq-6" class="overflow-hidden text-sm text-slate-600 transition-[max-height] duration-300 ease-in-out" aria-hidden="true">
+                  <div class="pt-4">
+                    Да, извършваме почистване след ремонт в Павликени и Великотърновска област,
+                    включително прах, остатъци от материали и изнасяне на дребни отпадъци.
+                  </div>
+                </div>
+              </div>
+
+              <div class="p-6">
+                <button type="button" class="flex w-full items-center justify-between text-left text-base font-semibold text-slate-900" aria-expanded="false" aria-controls="faq-7">
+                  Как гарантирате безопасност при рязане на дървета?
+                  <svg class="h-5 w-5 text-gray-500 transition-transform" viewBox="0 0 24 24" fill="none" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 9l6 6 6-6" />
+                  </svg>
+                </button>
+                <div id="faq-7" class="overflow-hidden text-sm text-slate-600 transition-[max-height] duration-300 ease-in-out" aria-hidden="true">
+                  <div class="pt-4">
+                    Работим с професионално оборудване и планираме рязането според достъпа и близките
+                    сгради. След приключване извършваме изнасяне и извозване на дървесината.
+                  </div>
+                </div>
+              </div>
+
+              <div class="p-6">
+                <button type="button" class="flex w-full items-center justify-between text-left text-base font-semibold text-slate-900" aria-expanded="false" aria-controls="faq-8">
+                  Какви материали извозвате със самосвал?
+                  <svg class="h-5 w-5 text-gray-500 transition-transform" viewBox="0 0 24 24" fill="none" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 9l6 6 6-6" />
+                  </svg>
+                </button>
+                <div id="faq-8" class="overflow-hidden text-sm text-slate-600 transition-[max-height] duration-300 ease-in-out" aria-hidden="true">
+                  <div class="pt-4">
+                    Самосвалът е подходящ за почва, пясък, чакъл, строителни отпадъци и други обемни
+                    материали. Работим по обекти в Павликени и Великотърновска област.
+                  </div>
+                </div>
+              </div>
+
+              <div class="p-6">
+                <button type="button" class="flex w-full items-center justify-between text-left text-base font-semibold text-slate-900" aria-expanded="false" aria-controls="faq-9">
+                  Какъв товар може да се превозва с бус?
+                  <svg class="h-5 w-5 text-gray-500 transition-transform" viewBox="0 0 24 24" fill="none" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 9l6 6 6-6" />
+                  </svg>
+                </button>
+                <div id="faq-9" class="overflow-hidden text-sm text-slate-600 transition-[max-height] duration-300 ease-in-out" aria-hidden="true">
+                  <div class="pt-4">
+                    Превозваме мебели, техника, чували, инструменти и материали. Услугата е удобна за
+                    местни доставки в Павликени и региона.
+                  </div>
+                </div>
+              </div>
+
+              <div class="p-6">
+                <button type="button" class="flex w-full items-center justify-between text-left text-base font-semibold text-slate-900" aria-expanded="false" aria-controls="faq-10">
+                  Как да получа безплатна оферта?
+                  <svg class="h-5 w-5 text-gray-500 transition-transform" viewBox="0 0 24 24" fill="none" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 9l6 6 6-6" />
+                  </svg>
+                </button>
+                <div id="faq-10" class="overflow-hidden text-sm text-slate-600 transition-[max-height] duration-300 ease-in-out" aria-hidden="true">
+                  <div class="pt-4">
+                    Обади се или изпрати снимки по телефона/Viber. Така даваме бърза и точна оферта
+                    за Павликени и Великотърновска област.
+                  </div>
+                </div>
+              </div>
+
+              <div class="p-6">
+                <button type="button" class="flex w-full items-center justify-between text-left text-base font-semibold text-slate-900" aria-expanded="false" aria-controls="faq-11">
+                  Работите ли през уикенда?
+                  <svg class="h-5 w-5 text-gray-500 transition-transform" viewBox="0 0 24 24" fill="none" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 9l6 6 6-6" />
+                  </svg>
+                </button>
+                <div id="faq-11" class="overflow-hidden text-sm text-slate-600 transition-[max-height] duration-300 ease-in-out" aria-hidden="true">
+                  <div class="pt-4">
+                    Да, при предварителна уговорка изпълняваме заявки и през уикенда, особено при
+                    спешни случаи или по-големи обекти.
+                  </div>
+                </div>
+              </div>
+
+              <div class="p-6">
+                <button type="button" class="flex w-full items-center justify-between text-left text-base font-semibold text-slate-900" aria-expanded="false" aria-controls="faq-12">
+                  Издавате ли документ или фактура?
+                  <svg class="h-5 w-5 text-gray-500 transition-transform" viewBox="0 0 24 24" fill="none" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 9l6 6 6-6" />
+                  </svg>
+                </button>
+                <div id="faq-12" class="overflow-hidden text-sm text-slate-600 transition-[max-height] duration-300 ease-in-out" aria-hidden="true">
+                  <div class="pt-4">
+                    При необходимост можем да предоставим документ за извършена услуга. Уточнява се
+                    предварително при заявката.
+                  </div>
+                </div>
+              </div>
             </div>
+          </div>
         </div>
-    </div>
-  </div>
+      </section>
 
-  <script type="text/javascript" src="js/bootstrap.bundle.min.js"></script>
-  <script src="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.js"></script>
-  <script type="text/javascript" src="js/script.js"></script>
-  <script src="https://code.iconify.design/iconify-icon/1.0.7/iconify-icon.min.js"></script>
-</body>
+      <!-- Contact Section -->
+      <section id="contact" class="scroll-mt-28 py-16 md:py-20">
+        <div class="mx-auto max-w-6xl px-4 sm:px-6 lg:px-8">
+          <div class="grid gap-10 lg:grid-cols-[1.1fr_1fr] lg:gap-16">
+            <div>
+              <h2 class="text-2xl font-semibold text-slate-900 sm:text-3xl">
+                Контакти и безплатна оферта в Павликени
+              </h2>
+              <p class="mt-3 max-w-2xl text-base text-slate-600">
+                Обади се на <a href="tel:+359887079976" class="font-semibold text-brandBlue">0887 079 976</a>
+                или изпрати запитване чрез формата. Реагираме бързо в Павликени и Великотърновска област.
+              </p>
 
+              <div class="mt-6 rounded-3xl border border-slate-100 bg-white p-6 shadow-soft">
+                <div class="flex items-center gap-3">
+                  <div class="flex h-12 w-12 items-center justify-center rounded-full bg-green-100 text-brandGreen">
+                    <svg class="h-5 w-5 text-gray-500" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5h2l3 7-1.5 3h11L19 8H6" />
+                    </svg>
+                  </div>
+                  <div>
+                    <p class="text-sm font-semibold text-slate-900">Телефон за връзка</p>
+                    <a href="tel:+359887079976" class="text-base font-semibold text-brandBlue">0887 079 976</a>
+                  </div>
+                </div>
+                <p class="mt-4 text-sm text-slate-600">
+                  Косене, почистване, рязане на дървета, самосвал, бус и извозване на отпадъци.
+                </p>
+                <a href="tel:+359887079976" class="mt-4 inline-flex text-2xl font-semibold text-slate-900">
+                  0887 079 976
+                </a>
+              </div>
+            </div>
+
+            <form
+              id="contact-form"
+              class="rounded-3xl border border-slate-100 bg-white p-6 shadow-soft"
+              aria-label="Форма за контакт"
+              data-mailto="contact@chistodokrai.bg"
+            >
+              <div class="grid gap-4">
+                <div>
+                  <label for="name" class="text-sm font-semibold text-slate-700">Име</label>
+                  <input
+                    id="name"
+                    name="name"
+                    type="text"
+                    autocomplete="name"
+                    required
+                    class="mt-2 w-full rounded-2xl border border-slate-200 px-4 py-3 text-sm text-slate-900 outline-none transition focus:border-brandGreen"
+                  />
+                </div>
+                <div>
+                  <label for="phone" class="text-sm font-semibold text-slate-700">Телефон</label>
+                  <input
+                    id="phone"
+                    name="phone"
+                    type="tel"
+                    autocomplete="tel"
+                    required
+                    class="mt-2 w-full rounded-2xl border border-slate-200 px-4 py-3 text-sm text-slate-900 outline-none transition focus:border-brandGreen"
+                  />
+                </div>
+                <div>
+                  <label for="service" class="text-sm font-semibold text-slate-700">Услуга</label>
+                  <select
+                    id="service"
+                    name="service"
+                    required
+                    class="mt-2 w-full rounded-2xl border border-slate-200 px-4 py-3 text-sm text-slate-900 outline-none transition focus:border-brandGreen"
+                  >
+                    <option value="" selected>Избери услуга</option>
+                    <option value="Косене на дворове">Косене на дворове</option>
+                    <option value="Почистване">Почистване</option>
+                    <option value="Рязане на дървета">Рязане на дървета</option>
+                    <option value="Самосвал">Самосвал</option>
+                    <option value="Бус / транспорт">Бус / транспорт</option>
+                    <option value="Извозване на отпадъци">Извозване на отпадъци</option>
+                  </select>
+                </div>
+                <div>
+                  <label for="location" class="text-sm font-semibold text-slate-700">Населено място</label>
+                  <input
+                    id="location"
+                    name="location"
+                    type="text"
+                    autocomplete="address-level2"
+                    required
+                    placeholder="Павликени, Велико Търново, село..."
+                    class="mt-2 w-full rounded-2xl border border-slate-200 px-4 py-3 text-sm text-slate-900 outline-none transition focus:border-brandGreen"
+                  />
+                </div>
+                <div>
+                  <label for="message" class="text-sm font-semibold text-slate-700">Съобщение</label>
+                  <textarea
+                    id="message"
+                    name="message"
+                    rows="4"
+                    required
+                    class="mt-2 w-full rounded-2xl border border-slate-200 px-4 py-3 text-sm text-slate-900 outline-none transition focus:border-brandGreen"
+                  ></textarea>
+                </div>
+                <p id="contact-error" class="hidden rounded-2xl border border-amber-200 bg-amber-50 px-4 py-3 text-sm text-amber-700" aria-live="polite"></p>
+                <p id="contact-success" class="hidden rounded-2xl border border-emerald-200 bg-emerald-50 px-4 py-3 text-sm text-emerald-700" aria-live="polite">
+                  Благодарим! Ще се свържем с теб възможно най-скоро.
+                </p>
+                <button
+                  type="submit"
+                  class="rounded-full bg-brandGreen px-6 py-3 text-base font-semibold text-white shadow-soft transition hover:bg-green-600"
+                >
+                  Изпрати запитване
+                </button>
+              </div>
+            </form>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="border-t border-slate-100 py-8">
+      <div class="mx-auto flex max-w-6xl flex-col items-center justify-between gap-4 px-4 text-sm text-slate-500 sm:flex-row sm:px-6 lg:px-8">
+        <div class="flex flex-col items-center gap-1 text-center sm:items-start sm:text-left">
+          <p>© 2026 ЧистоДоКрай. Всички права запазени.</p>
+          <p class="text-xs text-slate-400">Изработка на сайта: Валентин Желев</p>
+        </div>
+        <a href="tel:+359887079976" class="font-semibold text-brandBlue">0887 079 976</a>
+      </div>
+    </footer>
+
+    <!-- LocalBusiness Schema (placeholder) -->
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "FAQPage",
+        "mainEntity": [
+          {
+            "@type": "Question",
+            "name": "Как се формира цената за косене и почистване в Павликени?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Цената се определя според площта, достъпа, обема отпадъци и нужната техника. В Павликени и Великотърновска област правим оглед по снимки или на място и даваме точна оферта без фиксирани тарифи."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Имате ли възможност за услуга още същия ден?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "При свободен график можем да реагираме още същия ден в Павликени или близките населени места. Най-бързо става при изпратени снимки и ясна информация за обекта."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Кои райони обслужвате във Великотърновска област?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Основно работим в Павликени, Велико Търново и околните градове и села. При по-големи обекти покриваме цялата Великотърновска област след уточняване на график."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Къде се извозват отпадъците?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Всички отпадъци се извозват само до регламентирани депа, съгласно изискванията за Павликени и Великотърновска област."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Предлагате ли абонамент за косене и поддръжка?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Да, можем да организираме регулярни посещения с подходяща честота според сезона и растежа на тревата. Това е удобна опция за имоти в Павликени и региона."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Правите ли почистване след ремонт?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Да, извършваме почистване след ремонт в Павликени и Великотърновска област, включително прах, остатъци от материали и изнасяне на дребни отпадъци."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Как гарантирате безопасност при рязане на дървета?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Работим с професионално оборудване и планираме рязането според достъпа и близките сгради. След приключване извършваме изнасяне и извозване на дървесината."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Какви материали извозвате със самосвал?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Самосвалът е подходящ за почва, пясък, чакъл, строителни отпадъци и други обемни материали. Работим по обекти в Павликени и Великотърновска област."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Какъв товар може да се превозва с бус?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Превозваме мебели, техника, чували, инструменти и материали. Услугата е удобна за местни доставки в Павликени и региона."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Как да получа безплатна оферта?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Обади се или изпрати снимки по телефона/Viber. Така даваме бърза и точна оферта за Павликени и Великотърновска област."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Работите ли през уикенда?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Да, при предварителна уговорка изпълняваме заявки и през уикенда, особено при спешни случаи или по-големи обекти."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Издавате ли документ или фактура?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "При необходимост можем да предоставим документ за извършена услуга. Уточнява се предварително при заявката."
+            }
+          }
+        ]
+      }
+    </script>
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "LocalBusiness",
+        "name": "ЧистоДоКрай",
+        "telephone": "+359887079976",
+        "address": {
+          "@type": "PostalAddress",
+          "streetAddress": "Адрес при запитване",
+          "addressLocality": "Павликени",
+          "addressRegion": "Великотърновска област",
+          "addressCountry": "BG"
+        },
+        "areaServed": ["Павликени", "Veliko Tarnovo Province"],
+        "serviceType": [
+          "mowing",
+          "cleaning",
+          "transport",
+          "waste removal",
+          "tree cutting",
+          "dump truck"
+        ]
+      }
+    </script>
+
+    <script type="module">
+      const menuButton = document.getElementById("mobile-menu-button");
+      const mobileMenu = document.getElementById("mobile-menu");
+
+      menuButton.addEventListener("click", () => {
+        const isExpanded = menuButton.getAttribute("aria-expanded") === "true";
+        menuButton.setAttribute("aria-expanded", String(!isExpanded));
+        mobileMenu.classList.toggle("hidden");
+      });
+
+      const galleryGrid = document.getElementById("gallery-grid");
+      const showMoreButton = document.getElementById("gallery-show-more");
+      const categories = ["kosene", "pochistvane", "darveta", "samosval", "bus", "izvozvane"];
+      const altTextByCategory = {
+        kosene: "Косене на двор в Павликени",
+        pochistvane: "Почистване на имот в Павликени",
+        darveta: "Рязане на дървета в Павликени",
+        samosval: "Самосвал услуги във Великотърновска област",
+        bus: "Бус транспорт във Великотърновска област",
+        izvozvane: "Извозване на отпадъци в Павликени"
+      };
+
+      if (galleryGrid) {
+        const totalImages = 55;
+        const itemsHtml = Array.from({ length: totalImages }, (_, index) => {
+          const number = index + 1;
+          const category = categories[index % categories.length];
+          const altText = altTextByCategory[category];
+          const src = `images/${number}.jpg`;
+          return `
+            <button type="button" class="group relative overflow-hidden rounded-2xl shadow-soft" data-gallery-item data-category="${category}" data-lightbox="${src}" aria-label="Отвори снимка: ${altText}">
+              <img src="${src}" alt="${altText}" loading="lazy" decoding="async" width="800" height="600" class="h-full w-full object-cover transition duration-300 group-hover:scale-105" />
+            </button>
+          `;
+        }).join("");
+        galleryGrid.innerHTML = itemsHtml;
+      }
+
+      const galleryItems = Array.from(document.querySelectorAll("[data-gallery-item]"));
+      let galleryExpanded = false;
+
+      const updateGalleryVisibility = () => {
+        if (!galleryItems.length) return;
+        galleryItems.forEach((item, index) => {
+          const shouldHide = !galleryExpanded && index >= 8;
+          item.classList.toggle("hidden", shouldHide);
+        });
+        if (showMoreButton) {
+          showMoreButton.textContent = galleryExpanded ? "Покажи по-малко" : "Покажи още снимки";
+          showMoreButton.classList.toggle("hidden", galleryItems.length <= 8);
+        }
+      };
+
+      updateGalleryVisibility();
+
+      showMoreButton?.addEventListener("click", () => {
+        galleryExpanded = !galleryExpanded;
+        updateGalleryVisibility();
+        if (!galleryExpanded) {
+          document.getElementById("gallery")?.scrollIntoView({ behavior: "smooth", block: "start" });
+        }
+      });
+      const lightbox = document.getElementById("lightbox");
+      const lightboxImage = document.getElementById("lightbox-image");
+      const closeButton = lightbox?.querySelector("[data-lightbox-close]");
+      const prevButton = lightbox?.querySelector("[data-lightbox-prev]");
+      const nextButton = lightbox?.querySelector("[data-lightbox-next]");
+      let currentIndex = 0;
+      let lastFocusedElement = null;
+
+      const getVisibleItems = () => galleryItems.filter((item) => !item.classList.contains("hidden"));
+
+      const openLightbox = (index) => {
+        if (!lightbox || !lightboxImage) return;
+        const visibleItems = getVisibleItems();
+        const target = visibleItems[index];
+        if (!target) return;
+        const src = target.getAttribute("data-lightbox");
+        const img = target.querySelector("img");
+        if (!src) return;
+        currentIndex = index;
+        lightboxImage.src = src;
+        lightboxImage.alt = img?.alt || "Снимка от галерията";
+        lastFocusedElement = document.activeElement;
+        lightbox.classList.remove("hidden");
+        lightbox.setAttribute("aria-hidden", "false");
+        document.body.style.overflow = "hidden";
+        closeButton?.focus();
+      };
+
+      const closeLightbox = () => {
+        if (!lightbox) return;
+        lightbox.classList.add("hidden");
+        lightbox.setAttribute("aria-hidden", "true");
+        document.body.style.overflow = "";
+        if (lastFocusedElement) lastFocusedElement.focus();
+      };
+
+      const showNext = (direction) => {
+        const visibleItems = getVisibleItems();
+        if (!visibleItems.length) return;
+        currentIndex = (currentIndex + direction + visibleItems.length) % visibleItems.length;
+        openLightbox(currentIndex);
+      };
+
+      galleryItems.forEach((item) => {
+        item.addEventListener("click", () => {
+          const visibleItems = getVisibleItems();
+          const index = visibleItems.indexOf(item);
+          if (index > -1) openLightbox(index);
+        });
+      });
+
+      closeButton?.addEventListener("click", closeLightbox);
+      prevButton?.addEventListener("click", () => showNext(-1));
+      nextButton?.addEventListener("click", () => showNext(1));
+
+      document.addEventListener("keydown", (event) => {
+        if (!lightbox || lightbox.classList.contains("hidden")) return;
+        if (event.key === "Escape") closeLightbox();
+        if (event.key === "ArrowLeft") showNext(-1);
+        if (event.key === "ArrowRight") showNext(1);
+        if (event.key === "Tab") {
+          const focusable = [closeButton, prevButton, nextButton].filter(Boolean);
+          if (!focusable.length) return;
+          const first = focusable[0];
+          const last = focusable[focusable.length - 1];
+          if (event.shiftKey && document.activeElement === first) {
+            event.preventDefault();
+            last.focus();
+          } else if (!event.shiftKey && document.activeElement === last) {
+            event.preventDefault();
+            first.focus();
+          }
+        }
+      });
+
+      const accordion = document.querySelector("[data-accordion]");
+      if (accordion) {
+        const items = accordion.querySelectorAll("button[aria-controls]");
+        items.forEach((button) => {
+          const panel = document.getElementById(button.getAttribute("aria-controls"));
+          if (!panel) return;
+          panel.style.maxHeight = "0px";
+          button.addEventListener("click", () => {
+            const isExpanded = button.getAttribute("aria-expanded") === "true";
+            button.setAttribute("aria-expanded", String(!isExpanded));
+            button.querySelector("svg")?.classList.toggle("rotate-180", !isExpanded);
+            panel.setAttribute("aria-hidden", String(isExpanded));
+            panel.style.maxHeight = isExpanded ? "0px" : `${panel.scrollHeight}px`;
+          });
+        });
+      }
+
+      const contactForm = document.getElementById("contact-form");
+      if (contactForm) {
+        const errorBox = document.getElementById("contact-error");
+        const successBox = document.getElementById("contact-success");
+        contactForm.addEventListener("submit", (event) => {
+          event.preventDefault();
+          errorBox?.classList.add("hidden");
+          successBox?.classList.add("hidden");
+
+          const formData = new FormData(contactForm);
+          const requiredFields = ["name", "phone", "service", "location", "message"];
+          const missing = requiredFields.filter((field) => !String(formData.get(field) || "").trim());
+
+          if (missing.length) {
+            if (errorBox) {
+              errorBox.textContent = "Моля, попълни всички задължителни полета.";
+              errorBox.classList.remove("hidden");
+            }
+            return;
+          }
+
+          const subject = "Запитване за услуга - ЧистоДоКрай";
+          const body = [
+            `Име: ${formData.get("name")}`,
+            `Телефон: ${formData.get("phone")}`,
+            `Услуга: ${formData.get("service")}`,
+            `Населено място: ${formData.get("location")}`,
+            `Съобщение: ${formData.get("message")}`
+          ].join("\n");
+
+          const mailto = contactForm.getAttribute("data-mailto") || "";
+          window.location.href = `mailto:${mailto}?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
+
+          contactForm.reset();
+          if (successBox) {
+            successBox.classList.remove("hidden");
+          }
+        });
+      }
+    </script>
+  </body>
 </html>
