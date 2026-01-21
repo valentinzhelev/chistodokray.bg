@@ -796,9 +796,11 @@
               id="contact-form"
               class="rounded-3xl border border-slate-100 bg-white p-6 shadow-soft"
               aria-label="Форма за контакт"
-              data-mailto="stefan@chistodokray.bg"
+              action="https://formspree.io/f/xdaaydgz"
+              method="POST"
             >
               <div class="grid gap-4">
+                <input type="hidden" name="_subject" value="Запитване за услуга - ЧистоДоКрай" />
                 <div>
                   <label for="name" class="text-sm font-semibold text-slate-700">Име</label>
                   <input
@@ -1175,7 +1177,7 @@
       if (contactForm) {
         const errorBox = document.getElementById("contact-error");
         const successBox = document.getElementById("contact-success");
-        contactForm.addEventListener("submit", (event) => {
+        contactForm.addEventListener("submit", async (event) => {
           event.preventDefault();
           errorBox?.classList.add("hidden");
           successBox?.classList.add("hidden");
@@ -1192,21 +1194,28 @@
             return;
           }
 
-          const subject = "Запитване за услуга - ЧистоДоКрай";
-          const body = [
-            `Име: ${formData.get("name")}`,
-            `Телефон: ${formData.get("phone")}`,
-            `Услуга: ${formData.get("service")}`,
-            `Населено място: ${formData.get("location")}`,
-            `Съобщение: ${formData.get("message")}`
-          ].join("\n");
+          try {
+            const response = await fetch(contactForm.action, {
+              method: "POST",
+              body: formData,
+              headers: {
+                Accept: "application/json",
+              },
+            });
 
-          const mailto = contactForm.getAttribute("data-mailto") || "";
-          window.location.href = `mailto:${mailto}?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
+            if (!response.ok) {
+              throw new Error("Formspree request failed");
+            }
 
-          contactForm.reset();
-          if (successBox) {
-            successBox.classList.remove("hidden");
+            contactForm.reset();
+            if (successBox) {
+              successBox.classList.remove("hidden");
+            }
+          } catch (error) {
+            if (errorBox) {
+              errorBox.textContent = "Имаше проблем при изпращането. Опитай отново.";
+              errorBox.classList.remove("hidden");
+            }
           }
         });
       }
